@@ -36,16 +36,27 @@
     <!-- Zona donde mostramos lo más importante, los artistas -->
     <main>
 
-      <!-- Título de la sección de artistas que el usuario puede explorar -->
+    <!-- ARTISTAS DESTACADOS -->
+    <!-- Título de la sección de artistas que el usuario puede explorar -->
+  <section>
       <h2>Artistas destacados</h2>
+    
+    <!-- Aquí se van cargando las tarjetas de los artistas con JS -->
+    <!-- Solo 4 o 5 de ellos tienen funcionalidad real, pero visualmente simula una web completa -->
+    <div class="zona-artistas" id="zonaArtistas"></div>
+  </section>
 
-      <!-- Aquí se van cargando las tarjetas de los artistas con JS -->
-      <!-- Solo 4 o 5 de ellos tienen funcionalidad real, pero visualmente simula una web completa -->
-      <div class="artist-grid" id="artistGrid"></div>
 
-      <!-- Cuando se hace clic en un artista, aquí se muestra su info, letra y reproductor -->
-      <!-- No cambia de página, todo se carga dinámicamente para que parezca una app real -->
-      <section id="artistInfo"></section>
+    <!-- INFO DEL ARTISTA DESTACADO SELECCIONADO -->
+<section id="infoArtista" style="margin-top: 30px;"></section>
+
+    <!-- OTROS ARTISTAS (decorativos, sin clics) -->
+    <section>
+        <h2>Explora más artistas</h2>
+        <div class="zona-artistas" id="artistasDecorativos">
+        <!-- JS meterá las tarjetas decorativas aquí -->
+        </div>
+  </section>
 
     </main>
   </div>

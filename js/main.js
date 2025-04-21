@@ -9,13 +9,14 @@ const artistasDestacados = [
       estilo: "Trap / Hip Hop alternativo",
       audio: "postmalone_tema.mp3",
       lyrics: "If you buy that echo, why you lyin'? You broke",
+      link: "post-malone.html", // Enlace a la página del artista
     },
     {
       name: "Grimes",
       img: "grimes.webp",
       info: "Artista canadiense de electrónica experimental, visualmente innovadora y sonoramente única.",
       estilo: "Electro pop / Experimental",
-      audio: "Grimes Genesis.mp3",
+      audio: "Grimes_Genesis.mp3",
       lyrics: "My heart will never feel, will never see, will never know...",
     },
     {
@@ -55,7 +56,7 @@ const artistasDestacados = [
       img: "kaseo.jpeg",
       info: "Kase O es uno de los mayores referentes del rap en español, con letras profundas y estilo personal.",
       estilo: "Rap consciente / Hip Hop",
-      audio: "kaseo_reflexiones.mp3",
+      audio: "kaseo_yemen.mp3",
       lyrics: "Las palabras pesan más que el plomo...",
     },
     {
@@ -63,7 +64,7 @@ const artistasDestacados = [
       img: "ca7trielypacoamoroso.jpg",
       info: "dúo de trap experimental, hip hop, electrónica y pop originario de Buenos Aires, Argentina. Está formado por Catriel Guerreiro y Ulises Guerriero alias Paco Amoroso.",
       estilo: "Trap Experimental",
-      audio: "lemniscata_fragmento1.mp3",
+      audio: "catriel_tetas.mp3",
       lyrics: " Let the knowledge invade your psyche...",
     },
     {
@@ -71,7 +72,7 @@ const artistasDestacados = [
       img: "brianeno.jpeg",
       info: "Pionero de la música ambient. Creador de atmósferas electrónicas profundas e hipnóticas.",
       estilo: "Ambient / Experimental",
-      audio: "brianeno_reflections.mp3",
+      audio: "brianeno_therewerebells.mp3",
       lyrics: "(Ambient instrumental)",
     },
     {
@@ -147,17 +148,21 @@ artistasDestacados.forEach(artista => {
       <h3>${artista.name}</h3>
       <p>${artista.info}</p>
       <p><strong>Estilo:</strong> ${artista.estilo}</p>
-
+  
       <audio controls style="margin: 10px 0;">
         <source src="assets/audio/${artista.audio}" type="audio/mpeg">
         Tu navegador no soporta el elemento de audio.
       </audio>
-
+  
       <pre style="white-space: pre-wrap; background-color: #1e1e1e; padding: 10px; border-radius: 5px; color: #ccc;">
-${artista.lyrics}
+        ${artista.lyrics}
       </pre>
-  `;
+  
+      <!-- Enlace "Más info" para redirigir a la página del artista -->
+      <a href="${artista.link}" class="more-info-link">+ Más info sobre este artista | Descubre su música</a>
+    `;
   });
+  
 
   zonaArtistas.appendChild(tarjeta);
 });

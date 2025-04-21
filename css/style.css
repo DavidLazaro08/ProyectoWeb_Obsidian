@@ -1,0 +1,86 @@
+/* ===== ESTILO GENERAL DE LA PÁGINA ===== */
+/* Fondo oscuro tipo Spotify, fuente clara y estilo limpio */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #121212;
+    color: white;
+  }
+  
+  /* ===== CABECERA SUPERIOR ===== */
+  /* Esta parte es la barra superior de la web, con el logo, la búsqueda y el perfil */
+  header {
+    background: linear-gradient(to right, #14532d, #0f766e); /* degradado verde a verde-azulado */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Barra de búsqueda centrada */
+  header input {
+    width: 40%;
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+  }
+  
+  /* ===== ESTRUCTURA GENERAL ===== */
+  /* Container principal que reparte el espacio entre menú lateral y contenido principal */
+  .container {
+    display: flex;
+  }
+  
+  /* ===== MENÚ LATERAL ===== */
+  /* Menú lateral izquierdo con fondo oscuro y enlaces verticales */
+  nav {
+    width: 200px;
+    background-color: #191414;
+    padding: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav li {
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  
+  /* ===== CONTENIDO PRINCIPAL ===== */
+  /* Aquí se muestra todo lo importante: artistas y su información */
+  main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* ===== TARJETAS DE ARTISTAS ===== */
+  /* Zona donde se colocan las tarjetas de los artistas */
+  .artist-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  /* Diseño visual de cada artista */
+  .artist-card {
+    background-color: #282828;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .artist-card:hover {
+    transform: scale(1.05); /* Efecto de zoom suave al pasar el ratón */
+  }
+  
+  .artist-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  

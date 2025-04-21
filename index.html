@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Obsidian Music - Home</title>
+
+  <!-- Enlazamos el CSS principal con todo el diseño y estilo que sigue la estética de Spotify -->
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+
+  <!-- Parte superior de nuestra web, donde va el logo, la búsqueda y el acceso al perfil -->
+  <!-- Es lo primero que se ve al entrar después del login -->
+  <header>
+    <div class="logo">🎧 Obsidian Music</div>
+    <input type="text" placeholder="Buscar artistas..." id="searchBar"/>
+    <div class="perfil">👤 Perfil</div>
+  </header>
+
+  <!-- Aquí empieza la estructura principal de la página, dividida en un menú lateral y el contenido central -->
+  <div class="container">
+
+    <!-- Menú lateral con accesos a Inicio, Perfil y el juego musical (aún por hacerse)-->
+    <!-- No está conectado aún, pero está ahí para simular la navegación típica de una app -->
+    <nav>
+      <ul>
+        <li>🏠 Inicio</li>
+        <li>👤 Perfil</li>
+        <li>🎮 Juego</li>
+      </ul>
+    </nav>
+
+    <!-- Zona donde mostramos lo más importante, los artistas -->
+    <main>
+
+      <!-- Título de la sección de artistas que el usuario puede explorar -->
+      <h2>Artistas destacados</h2>
+
+      <!-- Aquí se van cargando las tarjetas de los artistas con JS -->
+      <!-- Solo 4 o 5 de ellos tienen funcionalidad real, pero visualmente simula una web completa -->
+      <div class="artist-grid" id="artistGrid"></div>
+
+      <!-- Cuando se hace clic en un artista, aquí se muestra su info, letra y reproductor -->
+      <!-- No cambia de página, todo se carga dinámicamente para que parezca una app real -->
+      <section id="artistInfo"></section>
+
+    </main>
+  </div>
+
+  <!-- Enlace al script donde controlamos todo lo interactivo de la página -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

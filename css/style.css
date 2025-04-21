@@ -120,3 +120,30 @@ section:first-of-type {
     padding-bottom: 5px;
   }
   
+  /* Personalizar el reproductor de audio */
+audio {
+    width: 50%;
+    border-radius: 10px;  /* Bordes redondeados */
+    background-color: #2c3f52; /* Fondo oscuro o el color que prefieras */
+    border: 2px solid #1db985; /* Borde verde suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para darle más profundidad */
+    padding: 5px;
+  }
+  
+  /* Estilo del contenedor de audio (control de bordes y el fondo) */
+  audio::-webkit-media-controls-panel {
+    background: #2c3f52; /* Fondo para los controles */
+    border-radius: 8px;
+  }
+  
+  audio::-webkit-media-controls-play-button {
+    background-color: #1db985; /* Botón de play verde */
+    border-radius: 50%; /* Hacerlo redondeado */
+    padding: 10px;
+  }
+  
+  /* Personalización de otros botones como el volumen */
+  audio::-webkit-media-controls-volume-slider {
+    background-color: #1db985; /* Cambiar color del control de volumen */
+  }
+  

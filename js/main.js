@@ -9,7 +9,6 @@ const artistasDestacados = [
       estilo: "Trap / Hip Hop alternativo",
       audio: "postmalone_tema.mp3",
       lyrics: "If you buy that echo, why you lyin'? You broke",
-      youtube: "https://www.youtube.com/embed/uyNQBdZ-Qm4"
     },
     {
       name: "Grimes",
@@ -18,7 +17,6 @@ const artistasDestacados = [
       estilo: "Electro pop / Experimental",
       audio: "grimes_genesis.mp3",
       lyrics: "My heart will never feel, will never see, will never know...",
-      youtube: "https://www.youtube.com/embed/1FH-q0I1fJY"
     },
     {
       name: "Linkin Park",
@@ -27,7 +25,6 @@ const artistasDestacados = [
       estilo: "Rock / Nu Metal",
       audio: "linkin_numb.mp3",
       lyrics: "I've become so numb, I can't feel you there...",
-      youtube: "https://www.youtube.com/embed/kXYiU_JCYtU"
     },
     {
         name: "Proyecto Lazarus",
@@ -36,7 +33,6 @@ const artistasDestacados = [
         estilo: "Ambient / Drone experimental",
         audio: "lazarus_ambient.mp3",
         lyrics: "(Instrumental)",
-        youtube: "https://www.youtube.com/embed/XXXXXX"
     },
     {
       name: "Tame Impala",
@@ -45,7 +41,6 @@ const artistasDestacados = [
       estilo: "Psicodelia / Indie Rock",
       audio: "tameimpala_letithappen.mp3",
       lyrics: "Let it happen, let it happen...",
-      youtube: "https://www.youtube.com/embed/pFptt7Cargc"
     },
     {
       name: "Duki",
@@ -54,7 +49,6 @@ const artistasDestacados = [
       estilo: "Trap latino / Urbano",
       audio: "duki_goteo.mp3",
       lyrics: "Tengo el goteo, yeah...",
-      youtube: "https://www.youtube.com/embed/Eo-KmOd3i7s"
     },
     {
       name: "Kase O",
@@ -63,7 +57,6 @@ const artistasDestacados = [
       estilo: "Rap consciente / Hip Hop",
       audio: "kaseo_reflexiones.mp3",
       lyrics: "Las palabras pesan más que el plomo...",
-      youtube: "https://www.youtube.com/embed/XXXXXX"
     },
     {
       name: "Ca7triel y Paco Amoroso",
@@ -72,7 +65,6 @@ const artistasDestacados = [
       estilo: "Trap Experimental",
       audio: "lemniscata_fragmento1.mp3",
       lyrics: " Let the knowledge invade your psyche...",
-      youtube: "https://www.youtube.com/embed/XXXXXX"
     },
     {
       name: "Brian Eno",
@@ -81,7 +73,6 @@ const artistasDestacados = [
       estilo: "Ambient / Experimental",
       audio: "brianeno_reflections.mp3",
       lyrics: "(Ambient instrumental)",
-      youtube: "https://www.youtube.com/embed/XXXXXX"
     },
     {
       name: "Justice",
@@ -90,7 +81,6 @@ const artistasDestacados = [
       estilo: "Electrónica / French House",
       audio: "justice_dance.mp3",
       lyrics: "Do the dance...\nJump on the floor...",
-      youtube: "https://www.youtube.com/embed/XXXXXX"
     }
   ];
   
@@ -166,12 +156,7 @@ artistasDestacados.forEach(artista => {
       <pre style="white-space: pre-wrap; background-color: #1e1e1e; padding: 10px; border-radius: 5px; color: #ccc;">
 ${artista.lyrics}
       </pre>
-
-      <div style="margin-top: 20px;">
-        <p style="font-weight: bold;">Vídeo relacionado:</p>
-        <iframe width="300" height="170" src="${artista.youtube}" frameborder="0" allowfullscreen></iframe>
-      </div>
-    `;
+  `;
   });
 
   zonaArtistas.appendChild(tarjeta);

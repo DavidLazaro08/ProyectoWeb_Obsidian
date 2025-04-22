@@ -43,15 +43,33 @@ artistasDestacados.forEach(artista => {
 if (artistaActivo) {
   // CENTRO: Nombre, estilo y audio
   contenidoArtista.innerHTML = `
-    <h1>${artistaActivo.name}</h1>
-    <p>${artistaActivo.estilo}</p>
+    <div class="artista-cabecera">
+      <h1>${artistaActivo.name}</h1>
+      <p class="estilo">${artistaActivo.estilo}</p>
+      <p class="oyentes">Escuchado por miles de oyentes mensuales</p>
+    </div>
+
+    <div class="acciones-artista">
+      <button class="btn-reproducir">▶ Reproducir</button>
+      <button class="btn-seguir">+ Seguir</button>
+    </div>
+
+    <h3 class="subtitulo">Canción destacada</h3>
     <audio controls>
       <source src="assets/audio/${artistaActivo.audio}" type="audio/mpeg">
       Tu navegador no soporta el elemento de audio.
     </audio>
-    <pre style="margin-top:15px; background-color:#1e1e1e; padding:10px; border-radius:5px; color:#ccc;">
-${artistaActivo.lyrics}
-    </pre>
+
+    <h3 class="subtitulo">Letra</h3>
+    <pre class="letras-artista">${artistaActivo.lyrics}</pre>
+
+    <h3 class="subtitulo">Discografía destacada</h3>
+    <div class="discografia">
+      <div class="album">
+        <img src="assets/img/${artistaActivo.img}" alt="Álbum de ${artistaActivo.name}">
+        <p>${artistaActivo.name} - Álbum Principal</p>
+      </div>
+    </div>
   `;
 
   // DERECHA: Imagen y bio
@@ -63,4 +81,19 @@ ${artistaActivo.lyrics}
 } else {
   // Si no se encuentra el artista
   contenidoArtista.innerHTML = `<p>Artista no encontrado.</p>`;
+}
+
+// =============================================
+// TRANSICIÓN SUAVE AL VOLVER A INDEX DESDE EL MENÚ
+// =============================================
+const enlaceArtistas = document.querySelector(".nav-artistas");
+
+if (enlaceArtistas) {
+  enlaceArtistas.addEventListener("click", function (e) {
+    e.preventDefault(); // Evita el salto inmediato
+    document.body.classList.add("fade-out"); // Aplica animación
+    setTimeout(() => {
+      window.location.href = this.href; // Redirige después del efecto
+    }, 400); // Tiempo de espera igual al del efecto CSS
+  });
 }

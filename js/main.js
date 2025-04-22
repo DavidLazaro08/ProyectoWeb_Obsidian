@@ -18,10 +18,13 @@ artistasDestacados.forEach(artista => {
     <p style='font-size: 0.8em; color: #ccc;'>${artista.estilo}</p>
   `;
 
-  // Redirige a artista.html al hacer clic
+  // Redirige a artista.html con una transición suave
   tarjeta.addEventListener("click", () => {
     const nombreCodificado = encodeURIComponent(artista.name);
-    window.location.href = `artista.html?nombre=${nombreCodificado}`;
+    document.body.classList.add("fade-out"); // Aplica efecto de salida
+    setTimeout(() => {
+      window.location.href = `artista.html?nombre=${nombreCodificado}`;
+    }, 400); // Espera a que termine el efecto
   });
 
   zonaArtistas.appendChild(tarjeta);

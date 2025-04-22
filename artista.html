@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Obsidian Music | Artista</title>
+
+  <!-- Estilos generales -->
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- Estilos específicos para esta vista -->
+  <link rel="stylesheet" href="css/artista.css" />
+</head>
+
+<body>
+
+  <!-- CABECERA SIMPLE SIN MENÚ PRINCIPAL -->
+  <header>
+    <div class="logo">🎧 Obsidian Music</div>
+    <div class="perfil">👤 Perfil</div>
+  </header>
+
+  <!-- Botón de volver al menú -->
+  <div class="volver-wrapper">
+    <a href="index.html" class="volver-link">⬅ Volver al inicio</a>
+  </div>
+
+  <!-- Vista de artista detallada con 3 columnas -->
+  <main class="vista-artista">
+
+    <!-- Lista lateral con nombres de artistas destacados -->
+    <aside class="menu-artistas" id="menuArtistas">
+      <!-- JS cargará aquí los nombres -->
+    </aside>
+
+    <!-- Sección central con información del artista -->
+    <section class="contenido-artista" id="contenidoArtista">
+      <!-- JS mostrará aquí info dinámica -->
+    </section>
+
+    <!-- Columna derecha con bio y disco -->
+    <aside class="info-artista" id="infoArtistaLateral">
+      <!-- JS insertará disco y bio -->
+    </aside>
+
+     
+
+  </main>
+
+  
+
+  <!-- Script que carga datos desde la URL -->
+  <script src="js/listartistas.js"></script>
+  <script src="js/artista.js"></script>
+</body>
+</html>

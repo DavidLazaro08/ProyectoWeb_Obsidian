@@ -23,7 +23,7 @@
   <!-- Aquí empieza la estructura principal de la página, dividida en un menú lateral y el contenido central -->
   <div class="container">
 
-    <!-- Menú lateral con accesos a Inicio, Perfil y el juego musical (aún por hacerse)-->
+    <!-- Menú lateral con accesos a Inicio, Perfil y el juego musical (aún por hacerse) -->
     <!-- No está conectado aún, pero está ahí para simular la navegación típica de una app -->
     <nav>
       <ul>
@@ -36,32 +36,30 @@
     <!-- Zona donde mostramos lo más importante, los artistas -->
     <main>
 
-    <!-- ARTISTAS DESTACADOS -->
-    <!-- Título de la sección de artistas que el usuario puede explorar -->
-  <section>
-      <h2>Artistas destacados</h2>
-    
-    <!-- Aquí se van cargando las tarjetas de los artistas con JS -->
-    <!-- Solo 4 o 5 de ellos tienen funcionalidad real, pero visualmente simula una web completa -->
-    <div class="zona-artistas" id="zonaArtistas"></div>
-  </section>
+      <!-- ARTISTAS DESTACADOS -->
+      <!-- Título de la sección de artistas que el usuario puede explorar -->
+      <section>
+        <h2>Artistas destacados</h2>
 
+        <!-- Aquí se van cargando las tarjetas de los artistas con JS -->
+        <!-- Solo 4 o 5 de ellos tienen funcionalidad real, pero visualmente simula una web completa -->
+        <div class="zona-artistas" id="zonaArtistas"></div>
+      </section>
 
-    <!-- INFO DEL ARTISTA DESTACADO SELECCIONADO -->
-<section id="infoArtista" style="margin-top: 30px;"></section>
-
-    <!-- OTROS ARTISTAS (decorativos, sin clics) -->
-    <section>
+     
+      <!-- OTROS ARTISTAS (decorativos, sin clics) -->
+      <section>
         <h2>Explora más artistas</h2>
         <div class="zona-artistas" id="artistasDecorativos">
-        <!-- JS meterá las tarjetas decorativas aquí -->
+          <!-- JS meterá las tarjetas decorativas aquí -->
         </div>
-  </section>
+      </section>
 
     </main>
   </div>
 
-  <!-- Enlace al script donde controlamos todo lo interactivo de la página -->
+  <!-- Enlace a los scripts donde controlamos todo lo interactivo de la página -->
+  <script src="js/listartistas.js"></script>
   <script src="js/main.js"></script>
 
 </body>

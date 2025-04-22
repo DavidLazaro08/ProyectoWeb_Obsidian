@@ -1,46 +1,44 @@
-
-
 /* ===== ESTILO GENERAL DE LA PÁGINA ===== */
 /* Fondo oscuro tipo Spotify, fuente clara y estilo limpio */
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(180deg, #121212 0%, #073c38 50%, #121212 100%); 
-    color: white;
-  }
-  
-  /* ===== CABECERA SUPERIOR ===== */
-  /* Esta parte es la barra superior de la web, con el logo, la búsqueda y el perfil */
-  header {
-    background: linear-gradient(to right, #1db985, #073c38); /* degradado verde a verde-azulado */
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Barra de búsqueda centrada */
-  header input {
-    width: 40%;
-    padding: 8px;
-    border: none;
-    border-radius: 20px;
-  }
-  
-  /* ===== ESTRUCTURA GENERAL ===== */
-  /* Container principal que reparte el espacio entre menú lateral y contenido principal */
-  .container {
-    display: flex;
-  }
-  
-  /* ===== MENÚ LATERAL ===== */
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #121212 0%, #073c38 50%, #121212 100%); 
+  color: white;
+}
+
+/* ===== CABECERA SUPERIOR ===== */
+/* Esta parte es la barra superior de la web, con el logo, la búsqueda y el perfil */
+header {
+  background: linear-gradient(to right, #1db985, #073c38); /* degradado verde a verde-azulado */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Barra de búsqueda centrada */
+header input {
+  width: 40%;
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+}
+
+/* ===== ESTRUCTURA GENERAL ===== */
+/* Container principal que reparte el espacio entre menú lateral y contenido principal */
+.container {
+  display: flex;
+}
+
+/* ===== MENÚ LATERAL ===== */
 /* Menú lateral izquierdo con fondo oscuro y enlaces verticales */
 nav {
   width: 200px;
   background-color: #191414;
   padding: 20px;
   border-radius: 10px; /* Bordes redondeados para que se vea más elegante */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+  box-shadow: 4px 0 6px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
 }
 
 /* Estilos para la lista sin bullets */
@@ -60,6 +58,7 @@ nav li {
   transition: all 0.6s ease;
   border-radius: 5px;
   padding-left: 15px;
+  border-left: 15px solid transparent;
 }
 
 /* Cambiar color de fondo y otros efectos al pasar el mouse */
@@ -70,143 +69,131 @@ nav li:hover {
   border-left: 5px solid #1db985; /* Borde izquierdo verde */
 }
 
-/* Sombra general para el menú lateral */
-nav {
-  box-shadow: 4px 0 6px rgba(0, 0, 0, 0.3);
+/* ===== CONTENIDO PRINCIPAL ===== */
+/* Aquí se muestra todo lo importante: artistas y su información */
+main {
+  flex: 1;
+  padding: 20px;
 }
 
-/* Agregar un borde suave */
-nav li {
-  border-left: 15px solid transparent;
+/* ===== TARJETAS DE ARTISTAS ===== */
+/* Zona donde se colocan las tarjetas de los artistas */
+.zona-artistas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-  
-  /* ===== CONTENIDO PRINCIPAL ===== */
-  /* Aquí se muestra todo lo importante: artistas y su información */
-  main {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  /* ===== TARJETAS DE ARTISTAS ===== */
-  /* Zona donde se colocan las tarjetas de los artistas */
-  .zona-artistas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
-  /* Diseño visual de cada artista */
-  .tarjeta-artista {
-    background-color: #282828;
-    padding: 10px;
-    width: 150px;
-    text-align: center;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.8s, transform 0.8s ease-in-out; /* Transición lenta */
+/* Diseño visual de cada artista */
+.tarjeta-artista {
+  background-color: #282828;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.8s, transform 0.8s ease-in-out; /* Transición lenta */
 }
-  
-  .tarjeta-artista:hover {
+
+.tarjeta-artista:hover {
   background-color: #1db985; /* Cambiar color de fondo al pasar */
   color: #073c38; /* Cambiar color de texto al pasar */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar */
-  transform: scale(1.05); /* Efecto de zoom */  }
-  
-  .tarjeta-artista img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  /* Estilo para la sección de artistas destacados */
+  transform: scale(1.05); /* Efecto de zoom */
+}
+
+.tarjeta-artista img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Estilo para la sección de artistas destacados */
 section:first-of-type {
-    background-color: #1e1e1e; 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  }
-  
-  section:first-of-type h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 15px;
-    color: #1db985;
-    border-bottom: 3px solid #1db985;
-    padding-bottom: 5px;
-  }
-  
-  /* Estilo para la sección de artistas decorativos */
-  section:last-of-type {
-    background-color: #2c2c2c;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  section:last-of-type h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 15px;
-    color: #ccc;
-    border-bottom: 3px solid #ccc;
-    padding-bottom: 5px;
-  }
-  
-  /* Personalizar el reproductor de audio */
+  background-color: #1e1e1e; 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+section:first-of-type h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #1db985;
+  border-bottom: 3px solid #1db985;
+  padding-bottom: 5px;
+}
+
+/* Estilo para la sección de artistas decorativos */
+section:last-of-type {
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+section:last-of-type h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #ccc;
+  border-bottom: 3px solid #ccc;
+  padding-bottom: 5px;
+}
+
+/* Personalizar el reproductor de audio */
 audio {
-    width: 50%;
-    border-radius: 10px;  /* Bordes redondeados */
-    background-color: #2c3f52; /* Fondo oscuro o el color que prefieras */
-    border: 2px solid #1db985; /* Borde verde suave */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para darle más profundidad */
-    padding: 5px;
-  }
-  
-  /* Estilo del contenedor de audio (control de bordes y el fondo) */
-  audio::-webkit-media-controls-panel {
-    background: #2c3f52; /* Fondo para los controles */
-    border-radius: 8px;
-  }
-  
-  audio::-webkit-media-controls-play-button {
-    background-color: #1db985; /* Botón de play verde */
-    border-radius: 50%; /* Hacerlo redondeado */
-    padding: 10px;
-  }
-  
-  /* Personalización de otros botones como el volumen */
-  audio::-webkit-media-controls-volume-slider {
-    background-color: #1db985; /* Cambiar color del control de volumen */
-  }
+  width: 50%;
+  border-radius: 10px;  /* Bordes redondeados */
+  background-color: #2c3f52; /* Fondo oscuro */
+  border: 2px solid #1db985;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}
+
+audio::-webkit-media-controls-panel {
+  background: #2c3f52;
+  border-radius: 8px;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: #1db985;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  background-color: #1db985;
+}
 
 /* Estilo para el enlace de "Más info" */
 .more-info-link {
   display: inline-block;
   margin-top: 20px;
-  color: #1db985; /* El verde original */
+  color: #1db985;
   font-size: 1.2em;
   font-weight: bold;
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
-  background-color: #333; /* Fondo oscuro para el enlace */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Efecto suave */
+  background-color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .more-info-link:hover {
-  color: #073c38; /* Color más oscuro cuando el ratón está sobre el enlace */
-  background-color: #1db985; /* El fondo cambia a verde */
-  text-decoration: underline; /* Subrayado al pasar el ratón */
+  color: #073c38;
+  background-color: #1db985;
+  text-decoration: underline;
 }
 
 /* Agregar margen superior para la siguiente sección */
 section + section {
-  margin-top: 30px; /* Espacio superior para las siguientes secciones */
+  margin-top: 30px;
 }
 
 /* Agregar margen debajo del contenedor + Más info */
 #infoArtista a {
-  margin-top: 20px; /* Espacio arriba del link */
+  margin-top: 20px;
 }
 
 /* Estilo para la sección de discografía */
@@ -242,14 +229,12 @@ section + section {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-} 
-
-/* Estilo para la imagen del artista */
-.artist-image {
-  width: 80%; /* Ajusta el tamaño de la imagen al ancho que quieras */
-  border-radius: 10px; /* Si deseas bordes redondeados */
-  justify-content: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Añadir un pequeño sombreado */
-  margin-bottom: 20px; /* Espacio inferior para separar de la biografía */
 }
 
+.artist-image {
+  width: 80%;
+  border-radius: 10px;
+  justify-content: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}

@@ -2,87 +2,128 @@
 // LISTA COMPARTIDA DE ARTISTAS DESTACADOS
 // =============================================
 const artistasDestacados = [
-    {
-      name: "Post Malone",
-      img: "postmalone.webp",
-      info: "Post Malone es un cantante estadounidense que mezcla hip hop, pop y rock con un estilo muy personal.",
-      estilo: "Trap / Hip Hop alternativo",
-      audio: "postmalone_tema.mp3",
-      lyrics: "If you buy that echo, why you lyin'? You broke",
-    },
-    {
-      name: "Grimes",
-      img: "grimes.webp",
-      info: "Artista canadiense de electrónica experimental, visualmente innovadora y sonoramente única.",
-      estilo: "Electro pop / Experimental",
-      audio: "Grimes_Genesis.mp3",
-      lyrics: "My heart will never feel, will never see, will never know...",
-    },
-    {
-      name: "Tame Impala",
-      img: "tameimpala.jpg",
-      info: "Proyecto de Kevin Parker que fusiona rock psicodélico con electrónica suave e hipnótica.",
-      estilo: "Psicodelia / Indie Rock",
-      audio: "tameimpala_letithappen.mp3",
-      lyrics: "Let it happen, let it happen...",
-    },
-    {
-      name: "Duran Duran",
-      img: "duranduran.jpg",
-      info: "Banda británica de pop y rock, pioneros del new wave y synth-pop en los años 80.",
-      estilo: "Pop / New Wave",
-      audio: "duranduran_comeundone.mp3",
-      lyrics: "Hungry like the wolf...\nIn the night I hear them growl...",
-    },
-    {
-      name: "Proyecto Lazarus",
-      img: "proyectolazarus.jpg",
-      info: "Proyecto musical experimental de ambient, drone y paisajes sonoros oscuros e introspectivos.",
-      estilo: "Ambient / Drone experimental",
-      audio: "lazarus_ambient.mp3",
-      lyrics: "(Instrumental)",
-    },
-    {
-      name: "Duki",
-      img: "duki.webp",
-      info: "Figura clave del trap argentino, con una evolución musical hacia lo melódico y lo emocional.",
-      estilo: "Trap latino / Urbano",
-      audio: "duki_goteo.mp3",
-      lyrics: "Tengo el goteo, yeah...",
-    },
-    {
-      name: "Kase O",
-      img: "kaseo.jpeg",
-      info: "Kase O es uno de los mayores referentes del rap en español, con letras profundas y estilo personal.",
-      estilo: "Rap consciente / Hip Hop",
-      audio: "kaseo_yemen.mp3",
-      lyrics: "Las palabras pesan más que el plomo...",
-    },
-    {
-      name: "Ca7triel y Paco Amoroso",
-      img: "ca7trielypacoamoroso.jpg",
-      info: "Dúo de trap experimental, hip hop, electrónica y pop originario de Buenos Aires, Argentina.",
-      estilo: "Trap Experimental",
-      audio: "catriel_tetas.mp3",
-      lyrics: "Let the knowledge invade your psyche...",
-    },
-    {
-      name: "Brian Eno",
-      img: "brianeno.jpeg",
-      info: "Pionero de la música ambient. Creador de atmósferas electrónicas profundas e hipnóticas.",
-      estilo: "Ambient / Experimental",
-      audio: "brianeno_therewerebells.mp3",
-      lyrics: "(Ambient instrumental)",
-    },
-    {
-      name: "Justice",
-      img: "justice.jpg",
-      info: "Dúo francés de música electrónica con toques de rock y estética retro-futurista.",
-      estilo: "Electrónica / French House",
-      audio: "justice_dance.mp3",
-      lyrics: "Do the dance...\nJump on the floor...",
-    }
-  ];
+  {
+    name: "Post Malone",
+    img: "postmalone.webp",
+    info: "Post Malone es un cantante estadounidense que mezcla hip hop, pop y rock con un estilo muy personal.",
+    estilo: "Trap / Hip Hop alternativo",
+    audio: "postmalone_tema.mp3",
+    lyrics: "If you buy that echo, why you lyin'? You broke",
+    discos: [
+      { titulo: "Hollywood's Bleeding", portada: "hollywoods_bleeding.jpeg" },
+      { titulo: "Twelve Carat Toothache", portada: "twelve_carat_toothache.jpeg" }
+    ]
+  },
+  {
+    name: "Grimes",
+    img: "grimes.webp",
+    info: "Artista canadiense de electrónica experimental, visualmente innovadora y sonoramente única.",
+    estilo: "Electro pop / Experimental",
+    audio: "Grimes_Genesis.mp3",
+    lyrics: "My heart will never feel, will never see, will never know...",
+    discos: [
+      { titulo: "Art Angels", portada: "art_angels.jpeg" },
+      { titulo: "Miss Anthropocene", portada: "miss_anthropocene.jpeg" }
+    ]
+  },
+  {
+    name: "Tame Impala",
+    img: "tameimpala.jpg",
+    info: "Proyecto de Kevin Parker que fusiona rock psicodélico con electrónica suave e hipnótica.",
+    estilo: "Psicodelia / Indie Rock",
+    audio: "tameimpala_letithappen.mp3",
+    lyrics: "Let it happen, let it happen...",
+    discos: [
+      { titulo: "Currents", portada: "currents.jpeg" },
+      { titulo: "The Slow Rush", portada: "slowrush.jpeg" }
+    ]
+  },
+  {
+    name: "Duran Duran",
+    img: "duranduran.jpg",
+    info: "Banda británica de pop y rock, pioneros del new wave y synth-pop en los años 80.",
+    estilo: "Pop / New Wave",
+    audio: "duranduran_comeundone.mp3",
+    lyrics: "Hungry like the wolf...\nIn the night I hear them growl...",
+    discos: [
+      { titulo: "Rio", portada: "rio.jpeg" },
+      { titulo: "Future Past", portada: "future_past.jpeg" }
+    ]
+  },
+  {
+    name: "Proyecto Lazarus",
+    img: "proyectolazarus.jpg",
+    info: "Proyecto musical experimental de ambient, drone y paisajes sonoros oscuros e introspectivos.",
+    estilo: "Ambient / Drone experimental",
+    audio: "lazarus_ambient.mp3",
+    lyrics: "(Instrumental)",
+    discos: [
+      { titulo: "A Mental Drama", portada: "amentaldrama.jpg" },
+      { titulo: "HOME", portada: "home.jpg" }
+    ]
+  },
+  {
+    name: "Duki",
+    img: "duki.webp",
+    info: "Figura clave del trap argentino, con una evolución musical hacia lo melódico y lo emocional.",
+    estilo: "Trap latino / Urbano",
+    audio: "duki_goteo.mp3",
+    lyrics: "Tengo el goteo, yeah...",
+    discos: [
+      { titulo: "Desde el Fin del Mundo", portada: "desde_el_fin.jpeg" },
+      { titulo: "Temporada de Reggaetón 2", portada: "reggaeton2.jpeg" }
+    ]
+  },
+  {
+    name: "Kase O",
+    img: "kaseo.jpeg",
+    info: "Kase O es uno de los mayores referentes del rap en español, con letras profundas y estilo personal.",
+    estilo: "Rap consciente / Hip Hop",
+    audio: "kaseo_yemen.mp3",
+    lyrics: "Las palabras pesan más que el plomo...",
+    discos: [
+      { titulo: "El Círculo", portada: "el_circulo.jpeg" },
+      { titulo: "Jazz Magnetism", portada: "jazz_magnetism.jpeg" }
+    ]
+  },
+  {
+    name: "Ca7triel y Paco Amoroso",
+    img: "ca7trielypacoamoroso.jpg",
+    info: "Dúo de trap experimental, hip hop, electrónica y pop originario de Buenos Aires, Argentina.",
+    estilo: "Trap Experimental",
+    audio: "catriel_tetas.mp3",
+    lyrics: "Let the knowledge invade your psyche...",
+    discos: [
+      { titulo: "Baño Maria", portada: "bañomaria.jpeg" },
+      { titulo: "Papota", portada: "papota.jpeg" }
+    ]
+  },
+  {
+    name: "Brian Eno",
+    img: "brianeno.jpeg",
+    info: "Pionero de la música ambient. Creador de atmósferas electrónicas profundas e hipnóticas.",
+    estilo: "Ambient / Experimental",
+    audio: "brianeno_therewerebells.mp3",
+    lyrics: "(Ambient instrumental)",
+    discos: [
+      { titulo: "Ambient 1: Music for Airports", portada: "music_for_airports.jpeg" },
+      { titulo: "Another Green World", portada: "another_green_world.jpeg" }
+    ]
+  },
+  {
+    name: "Justice",
+    img: "justice.jpg",
+    info: "Dúo francés de música electrónica con toques de rock y estética retro-futurista.",
+    estilo: "Electrónica / French House",
+    audio: "justice_dance.mp3",
+    lyrics: "Do the dance...\nJump on the floor...",
+    discos: [
+      { titulo: "† (Cross)", portada: "cross.jpeg" },
+      { titulo: "Woman", portada: "woman.jpeg" }
+    ]
+  }
+];
+
   
   // =============================================
   // LISTA COMPARTIDA DE ARTISTAS DECORATIVOS

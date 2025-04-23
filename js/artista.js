@@ -13,7 +13,7 @@ const artistaNombre = params.get("nombre");
 // BUSCAMOS AL ARTISTA SELECCIONADO
 // =============================================
 const artistaActivo = artistasDestacados.find(
-  artista => artista.name === decodeURIComponent(artistaNombre)
+  (artista) => artista.name === decodeURIComponent(artistaNombre)
 );
 
 // =============================================
@@ -27,7 +27,7 @@ const infoArtistaLateral = document.getElementById("infoArtistaLateral");
 // MOSTRAR MENÚ LATERAL CON TODOS LOS ARTISTAS
 // =============================================
 menuArtistas.innerHTML = `<h3>Artistas</h3>`;
-artistasDestacados.forEach(artista => {
+artistasDestacados.forEach((artista) => {
   const item = document.createElement("li");
   item.textContent = artista.name;
   item.addEventListener("click", () => {
@@ -65,10 +65,12 @@ if (artistaActivo) {
 
     <h3 class="subtitulo">Discografía destacada</h3>
     <div class="discografia">
-      <div class="album">
-        <img src="assets/img/${artistaActivo.img}" alt="Álbum de ${artistaActivo.name}">
-        <p>${artistaActivo.name} - Álbum Principal</p>
-      </div>
+      ${artistaActivo.discos ? artistaActivo.discos.map(disco => `
+        <div class="album">
+          <img src="assets/img/${disco.portada}" alt="Portada de ${disco.titulo}">
+          <p>${disco.titulo}</p>
+        </div>
+      `).join('') : `<p>Sin discos disponibles</p>`}
     </div>
   `;
 
@@ -97,3 +99,4 @@ if (enlaceArtistas) {
     }, 400); // Tiempo de espera igual al del efecto CSS
   });
 }
+

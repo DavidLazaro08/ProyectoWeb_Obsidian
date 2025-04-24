@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil de Jacobo</title>
+  <link rel="stylesheet" href="css/perfil.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🎧 Obsidian Music</div>
+    <input type="text" placeholder="Buscar...">
+    <div>👤 Usuario</div>
+  </header>
+
+  <div class="container">
+    <!-- Menú lateral -->
+    <nav>
+      <ul>
+        <li><a href="index.html" style="color: inherit; text-decoration: none;">🏠 Inicio</a></li>
+        <li><a href="perfil.html" style="color: inherit; text-decoration: none;">👤 Perfil</a></li>
+        <li><a href="artista.html?nombre=Post%20Malone" style="color: inherit; text-decoration: none;">🎵 Artistas</a></li>
+        <li><a href="game.html" style="color: inherit; text-decoration: none;">🎮 Juego</a></li>
+        <li><a href="#" id="logout" style="color: inherit; text-decoration: none;">🚪 Cerrar sesión</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+      <section id="perfil">
+        <div class="perfil-header">
+            <div class="perfil-img-container">
+              <img src="assets/img/no_foto.webp" alt="Foto de perfil" class="perfil-img" id="perfilImagen">
+              <div class="overlay" onclick="document.getElementById('inputImagen').click()">
+                Cambiar foto
+              </div>
+              <input type="file" id="inputImagen" accept="image/*" style="display: none;">
+            </div>
+            <div>
+              <h1 class="perfil-nombre"></h1>
+            </div>
+        </div>
+          
+          
+
+        <div class="perfil-bloque">
+          <h2>Artistas más escuchados este mes</h2>
+          <div class="artista-popular">
+            <img src="assets/img/postmalone.webp" alt="Post Malone" />
+            <p><strong>Post Malone</strong><br><span>Artista</span></p>
+
+            <img src="assets/img/kendrick_lamar.jpg" alt="Kendrick Lamar" />
+            <p><strong>Kendrick Lamar</strong><br><span>Artista</span></p>
+
+            <img src="assets/img/eminem.jpg" alt="Eminem" />
+            <p><strong>Eminem</strong><br><span>Artista</span></p>
+
+            <img src="assets/img/skrillex.jpg" alt="Skrillex" />
+            <p><strong>Skrillex</strong><br><span>Artista</span></p>
+          </div>
+        </div>
+
+        <div class="perfil-bloque">
+          <h2>Canciones más escuchadas este mes</h2>
+          <ol class="canciones-populares">
+            <li><img src="assets/img/money.jpg" class="cancion-img"><strong>Money Made Me Do It</strong><br><small>Post Malone, 2 Chainz</small></li>
+            <li><img src="assets/img/tv off.jpg" class="cancion-img"><strong>tv off</strong><br><small>Kendrick Lamar</small></li>
+            <li><img src="assets/img/92 explorer.jpg" class="cancion-img"><strong>92 Explorer</strong><br><small>Post Malone</small></li>
+            <li><img src="assets/img/houdini.jpg" class="cancion-img"><strong>Houdini</strong><br><small>Eminem</small></li>
+            <li><img src="assets/img/bizarre.jpg" class="cancion-img"><strong>TOO BIZARRE</strong><br><small>Skrillex</small></li>
+          </ol>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+  const inputImagen = document.getElementById("inputImagen");
+  const perfilImagen = document.getElementById("perfilImagen");
+  const perfilNombre = document.querySelector(".perfil-nombre");
+
+  // Al cargar la página, obtenemos el usuario actual
+  window.addEventListener("DOMContentLoaded", () => {
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    const imagenGuardada = localStorage.getItem("fotoPerfil");
+
+    if (currentUser?.username) {
+      perfilNombre.textContent = currentUser.username;
+    }
+
+    // Si hay una imagen en localStorage, usarla. Si no, usar imagen por defecto.
+    perfilImagen.src = imagenGuardada || "assets/img/no_foto.webp";
+  });
+
+  // Cuando se cambia la imagen, la guardamos en localStorage
+  inputImagen.addEventListener("change", function () {
+    const file = this.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const base64 = e.target.result;
+        perfilImagen.src = base64;
+        localStorage.setItem("fotoPerfil", base64); // Guardar imagen
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+</script>
+
+  
+  
+</body>
+</html>

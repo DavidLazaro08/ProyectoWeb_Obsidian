@@ -42,6 +42,8 @@ document.getElementById('loginForm')?.addEventListener('submit', (e) => {
   const password = document.getElementById('password').value;
 
   if (validateUser(username, password)) {
+    const user = JSON.parse(localStorage.getItem('users')).find(user => user.username === username);
+    localStorage.setItem('currentUser', JSON.stringify(user)); // Guardar usuario actual
     localStorage.setItem('isLoggedIn', true); // Guardar estado de sesión
     alert('Inicio de sesión exitoso');
     window.location.href = 'index.html';

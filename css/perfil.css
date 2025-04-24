@@ -530,3 +530,160 @@ body.fade-out {
 
 
 
+
+
+
+/* ===== PERFIL ===== */
+#perfil {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Encabezado con imagen de perfil y nombre */
+  .perfil-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .perfil-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .perfil-nombre {
+    font-size: 2.5em;
+    margin: 0;
+  }
+  
+  .perfil-detalles {
+    color: #ccc;
+    font-size: 1em;
+    margin: 5px 0 0;
+  }
+  
+  /* Bloques de artistas o canciones */
+  .perfil-bloque {
+    margin-bottom: 40px;
+  }
+  
+  .perfil-bloque h2 {
+    font-size: 1.8em;
+    color: #1db985;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #1db985;
+    padding-bottom: 5px;
+  }
+  
+  /* Artista popular */
+  .artista-popular {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .artista-popular img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .artista-popular p {
+    color: white;
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .artista-popular span {
+    font-size: 0.9em;
+    color: #aaa;
+  }
+  
+  /* Canciones populares */
+  .canciones-populares {
+    list-style: decimal;
+    color: white;
+    padding-left: 20px;
+  }
+  
+  .canciones-populares li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+  }
+  
+  /* Botón para volver al inicio */
+  .boton-volver {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #1db985;
+    color: #073c38;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .boton-volver:hover {
+    background-color: #15a174;
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .perfil-img-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .perfil-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s ease;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+  }
+  
+  .perfil-img-container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .cancion-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    vertical-align: middle;
+  }
+  

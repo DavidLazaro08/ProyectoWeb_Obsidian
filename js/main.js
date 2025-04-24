@@ -1,3 +1,15 @@
+// Verificar si el usuario está autenticado
+if (!localStorage.getItem('isLoggedIn')) {
+  window.location.href = 'login.html'; // Redirigir al login si no está autenticado
+}
+
+// Manejar cierre de sesión
+document.getElementById('logout')?.addEventListener('click', () => {
+  localStorage.removeItem('isLoggedIn'); // Eliminar estado de sesión
+  alert('Has cerrado sesión');
+  window.location.href = 'login.html'; // Redirigir al login
+});
+
 // =============================================
 // DOM: ELEMENTOS DEL HTML
 // =============================================

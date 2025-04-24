@@ -15,10 +15,11 @@
   <!-- Parte superior de nuestra web, donde va el logo, la búsqueda y el acceso al perfil -->
   <!-- Es lo primero que se ve al entrar después del login -->
   <header>
-    <div class="logo">🎧 Obsidian Music</div>
+    <div class="logo">🎧 <b>Obsidian Music</b></div>
     <input type="text" placeholder="Buscar artistas..." id="searchBar"/>
     <div class="perfil">👤 Perfil</div>
   </header>
+
 
   <!-- Aquí empieza la estructura principal de la página, dividida en un menú lateral y el contenido central -->
   <div class="container">
@@ -62,18 +63,21 @@
   </div>
 
 
-  <footer id="reproductorFijo">
-    <audio id="reproductorGlobal" controls>
-      Tu navegador no soporta el elemento de audio.
-    </audio>
-  </footer>
-  
+<!-- Botón de reproducción aleatoria -->
+<footer id="reproductorFijo">
+  <div class="reproductor-lineal">
+    <button id="btnAleatorio" class="btn-reproducir">🎵<span><b>Canción Aleatoria</b></span></button>
+    <div id="cancionActual" class="nombre-cancion"></div>
+    <audio id="reproductorGlobal" controls></audio>
+  </div>
+</footer>
+
+
+ 
 
   <!-- Enlace a los scripts donde controlamos todo lo interactivo de la página -->
   <script src="js/listartistas.js"></script>
   <script src="js/main.js"></script>
-
-
 
 
 </body>

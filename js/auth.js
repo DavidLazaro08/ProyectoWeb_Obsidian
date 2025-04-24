@@ -1,7 +1,7 @@
 // Guardar usuarios en localStorage
-const saveUser = (username, password) => {
+const saveUser = (username, password, email) => {
   const users = JSON.parse(localStorage.getItem('users')) || [];
-  users.push({ username, password });
+  users.push({ username, password, email });
   localStorage.setItem('users', JSON.stringify(users));
 };
 
@@ -16,8 +16,21 @@ document.getElementById('registerForm')?.addEventListener('submit', (e) => {
   e.preventDefault();
   const username = document.getElementById('newUsername').value;
   const password = document.getElementById('newPassword').value;
+  const email = document.getElementById('email').value;
 
-  saveUser(username, password);
+  // Verificar si el usuario o el correo ya existen
+  const users = JSON.parse(localStorage.getItem('users')) || [];
+  if (users.some(user => user.username === username)) {
+    alert('El nombre de usuario ya existe. Por favor, elige otro.');
+    return;
+  }
+  if (users.some(user => user.email === email)) {
+    alert('El correo electrónico ya está registrado. Por favor, usa otro.');
+    return;
+  }
+
+  // Guardar el usuario
+  saveUser(username, password, email);
   alert('Usuario registrado con éxito');
   window.location.href = 'login.html';
 });

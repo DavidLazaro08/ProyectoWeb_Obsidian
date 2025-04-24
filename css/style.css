@@ -306,6 +306,74 @@ section + section {
   display: inline-block;
 }
 
+.footer-principal {
+  background-color: #111;
+  color: #ccc;
+  padding: 50px 20px 80px;
+  border-top: 1px solid #1db985;
+  font-size: 0.95em;
+  margin-bottom: 10px;
+}
+
+.footer-contenido {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-secciones {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.footer-columna {
+  min-width: 200px;
+}
+
+.footer-columna h3 {
+  color: #1db985;
+  font-size: 1.1em;
+
+}
+
+.footer-columna ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-columna li {
+  margin: 8px 0;
+}
+
+.footer-columna a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-columna a:hover {
+  color: #1db985;
+}
+
+.footer-contacto li {
+  color: #ccc;
+  font-weight: 400;
+  font-size: 0.95em;
+}
+
+.footer-copy {
+  color: #666;
+  font-size: 0.85em;
+}
+
+
+
+
 
 
 

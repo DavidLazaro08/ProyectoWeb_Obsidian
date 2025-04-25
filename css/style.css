@@ -371,6 +371,39 @@ section + section {
   font-size: 0.85em;
 }
 
+.novedades {
+  margin-bottom: 40px;
+}
+
+.novedades h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 25px;
+  color: #1db985;
+  border-bottom: 3px solid #1db985;
+  padding-bottom: 10px;
+}
+
+.contenedor-novedades {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tarjeta-novedad {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.tarjeta-novedad:hover {
+  transform: scale(1.03);
+}
 
 
 
@@ -380,3 +413,21 @@ section + section {
 /* ========================================= */
 
 /* Estilos de artista movidos a artista.css */
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #1db985;
+  border-bottom: 3px solid #1db985;
+  padding-bottom: 5px;
+}
+
+.titulo-seccion-blanco {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #ccc;
+  border-bottom: 3px solid #ccc;
+  padding-bottom: 5px;
+}

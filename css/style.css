@@ -306,227 +306,77 @@ section + section {
   display: inline-block;
 }
 
+.footer-principal {
+  background-color: #111;
+  color: #ccc;
+  padding: 50px 20px 80px;
+  border-top: 1px solid #1db985;
+  font-size: 0.95em;
+  margin-bottom: 10px;
+}
+
+.footer-contenido {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-secciones {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.footer-columna {
+  min-width: 200px;
+}
+
+.footer-columna h3 {
+  color: #1db985;
+  font-size: 1.1em;
+
+}
+
+.footer-columna ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-columna li {
+  margin: 8px 0;
+}
+
+.footer-columna a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-columna a:hover {
+  color: #1db985;
+}
+
+.footer-contacto li {
+  color: #ccc;
+  font-weight: 400;
+  font-size: 0.95em;
+}
+
+.footer-copy {
+  color: #666;
+  font-size: 0.85em;
+}
+
+
+
+
 
 
 
 /* ========================================= */
 
-
-/* ===== ESTILOS AÑADIDOS DESDE artista.css (antes separado) ===== */
-
-/* ===== VISTA DETALLADA DE ARTISTA (ESTILO SPOTIFY) ===== */
-/* Esta hoja de estilo complementa la general (style.css) y se aplica solo a artista.html */
-
- 
-  /* Vista principal dividida en tres columnas */
-  .vista-artista {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  /* ===== COLUMNA IZQUIERDA ===== */
-  /* Lista de artistas (funciona como navegación lateral en esta página) */
-  .menu-artistas {
-    width: 200px;
-    background-color: #121212;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  }
-  
-  .menu-artistas h3 {
-    color: #1db985;
-    margin-bottom: 10px;
-    font-size: 1.1em;
-  }
-  
-  .menu-artistas li {
-    list-style: none;
-    padding: 8px;
-    margin-bottom: 6px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    color: #ccc;
-  }
-  
-  .menu-artistas li:hover {
-    background-color: #1db985;
-    color: #073c38;
-  }
-  
-  /* ===== COLUMNA CENTRAL ===== */
-  /* Aquí se muestra el nombre del artista, estilo y canciones */
-  .contenido-artista {
-    flex: 2;
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-  
-  .contenido-artista h1 {
-    font-size: 2em;
-    margin-bottom: 5px;
-    color: #1db985;
-  }
-  
-  .contenido-artista p {
-    color: #aaa;
-    margin-bottom: 20px;
-  }
-  
-  .contenido-artista ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .contenido-artista li {
-    padding: 10px 0;
-    border-bottom: 1px solid #444;
-    font-size: 1em;
-    display: flex;
-    justify-content: space-between;
-    color: #eee;
-  }
-  
-  /* ===== COLUMNA DERECHA ===== */
-  /* Muestra la bio y la carátula de disco (o del artista) */
-  .info-artista {
-    width: 250px;
-    background-color: #203a3e;
-    padding: 15px;
-    border-radius: 10px;
-    color: white;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  }
-  
-  .info-artista img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-  
-  .info-artista h4 {
-    margin-bottom: 10px;
-    color: #1db985;
-  }
-  
-  .info-artista p {
-    font-size: 0.9em;
-    line-height: 1.4;
-    color: #ccc;
-  }
-  
-  .volver-wrapper {
-    padding: 10px 20px;
-  }
-  
-  .volver-link {
-    color: #1db985;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: color 0.3s;
-  }
-  
-  .volver-link:hover {
-    color: #ffffff;
-  }
-
-  /* Transición suave al cambiar de página */
-
-
-body.fade-out {
-  opacity: 0;
-}
-
-.artista-cabecera {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.artista-cabecera h1 {
-  width: 70%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 10px;
-  background: linear-gradient(to right, #1db985, #073c38);
-  color: white;
-  border-radius: 8px;
-  font-size: 3em;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-
-.artista-cabecera .estilo {
-  color: #1db985;
-  font-size: 1.2em;
-  margin-bottom: 5px;
-}
-
-.artista-cabecera .oyentes {
-  color: #bbb;
-  font-size: 0.9em;
-}
-
-.acciones-artista {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.acciones-artista button {
-  margin: 0 10px;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 30px;
-  background-color: #1db985;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.acciones-artista button:hover {
-  background-color: #17a674;
-}
-
-.subtitulo {
-  font-size: 1.5em;
-  color: white;
-  margin-top: 30px;
-  border-bottom: 2px solid #1db985;
-  padding-bottom: 5px;
-}
-
-.letras-artista {
-  background-color: #121212;
-  color: #ccc;
-  padding: 15px;
-  border-radius: 8px;
-  margin-top: 10px;
-  white-space: pre-wrap;
-}
-
-
-
-.album {
-  width: 180px;
-  background-color: #0d2326;
-  border-radius: 10px;
-  padding: 10px;
-  color: white;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.album img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 8px;
-}
-
-
-
+/* Estilos de artista movidos a artista.css */

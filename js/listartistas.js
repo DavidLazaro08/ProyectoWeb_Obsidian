@@ -110,6 +110,18 @@ const artistasDestacados = [
       { titulo: "Another Green World", portada: "another_green_world.jpeg" }
     ]
   },
+{
+  name: "Kendrick Lamar",
+  img: "kendricklamar.jpeg",
+  info: "Rapero, compositor y productor estadounidense, considerado uno de los artistas más influyentes y talentosos de la música contemporánea. Ganador de múltiples premios Grammy y el primer artista de rap en recibir un Premio Pulitzer por su álbum 'DAMN.'",
+  estilo: "Rap",
+  audio: "Kendrick_tvoff.mp3",
+  lyrics: "I got, I got, I got, I got...\nLoyalty, got royalty inside my DNA.",
+  discos: [
+    { titulo: "DAMN.", portada: "kendrick_damn.jpeg" },
+    { titulo: "good kid, m.A.A.d city", portada: "kendrick_gkmc.jpeg" }
+  ]
+},
   {
     name: "Justice",
     img: "justice.jpg",
@@ -121,7 +133,56 @@ const artistasDestacados = [
       { titulo: "† (Cross)", portada: "cross.jpeg" },
       { titulo: "Woman", portada: "woman.jpeg" }
     ]
+  },
+  {
+    name: "Skrillex",
+    img: "skrillex.jpeg",
+    info: "Productor musical, DJ y cantante estadounidense, pionero del dubstep moderno y una figura clave en la música electrónica. Conocido por su estilo agresivo y por colaboraciones con artistas de diversos géneros.",
+    estilo: "Dubstep / EDM",
+    audio: "equinox.mp3",
+    lyrics: "Shout to all my lost boys...\nBangarang!",
+    discos: [
+      { titulo: "Bangarang", portada: "skrillex_bangarang.jpeg" },
+      { titulo: "Recess", portada: "skrillex_recess.jpeg" }
+    ]
+  },  
+  {
+    name: "Eminem",
+    img: "eminem.jpeg",
+    info: "Rapero, productor y actor estadounidense. Considerado uno de los mejores letristas de todos los tiempos, famoso por su velocidad, complejidad lírica y estilo provocador.",
+    estilo: "Rap / Hip Hop",
+    audio: "WithoutMe.mp3",
+    lyrics: "You better lose yourself in the music...\nYou only get one shot...",
+    discos: [
+      { titulo: "The Marshall Mathers LP", portada: "marshallmatherslp.jpeg" },
+      { titulo: "The Eminem Show", portada: "eminemshow.jpeg" },
+    ]
+  },
+  {
+    name: "Myke Towers",
+    img: "myketowers.jpeg",
+    info: "Cantante y compositor puertorriqueño de música urbana, fusiona reguetón, trap latino y rap, consolidándose como una de las figuras clave del género.",
+    estilo: "Trap / Reguetón",
+    audio: "diosa.mp3",
+    lyrics: "Tú eres mi todo el plan...\nSiempre vas en mi playlist...",
+    discos: [
+      { titulo: "Easy Money Baby", portada: "easymoneybaby.jpeg" },
+      { titulo: "Lyke Mike", portada: "lykemike.jpeg" },
+    ]
+  },
+  {
+    name: "Bruno Mars",
+    img: "brunomars.jpeg",
+    info: "Cantante, compositor y productor estadounidense, conocido por su increíble versatilidad, estilo retro-funk y shows llenos de energía. Ha ganado múltiples premios Grammy.",
+    estilo: "Pop / Funk / R&B",
+    audio: "bruno.mp3",
+    lyrics: "Players only, come on...\nPut your pinky rings up to the moon!",
+    discos: [
+      { titulo: "Doo-Wops & Hooligans", portada: "doowops.jpeg" },
+      { titulo: "24K Magic", portada: "24kmagic.jpeg" }
+    ]
   }
+     
 ];
 
   

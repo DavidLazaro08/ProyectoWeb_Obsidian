@@ -2,15 +2,15 @@ const canciones = [
     {
         nombre: "Shape of You",
         artista: "Ed Sheeran",
-        url: "assets\audio\EdShape"
+        url: "assets/audio/EdShape.mp3"
     },
     {
         nombre: "Invisible",
         artista: "Duran Duran",
-        url: "assets\audio\DuranInvisible.mp3"
-    },
-  
+        url: "assets/audio/DuranInvisible.mp3"
+    }
 ];
+
 
 let cancionesGeneradas = 0;
 let cancionesAcertadas = 0;

@@ -441,6 +441,7 @@ section + section {
 
 body.fade-out {
   opacity: 0;
+  transition: opacity 0.4s ease-out;
 }
 
 .artista-cabecera {
@@ -747,3 +748,4 @@ body.fade-out {
     color: #666;
     font-size: 0.85em;
   }
+

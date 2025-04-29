@@ -1,55 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Juego Musical</title>
-  <link rel="stylesheet" href="./css/game.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Obsidian Music - Juego</title>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-  <div class="container">
-    <h1> ¿Adivinarás la canción?</h1>
-
-    <section id="select-artist">
-      <h2>Selecciona un artista</h2>
-      <div class="artist-selection">
-        <div class="artist-card" data-artist="artist1">
-          <img src="./assets/img/art_angels.jpeg" alt="Artista 1" />
-          <p>Grimes</p>
+    <header>
+        <div class="logo">🎧 <b>Obsidian Music</b></div>
+        <input type="text" placeholder="Buscar artistas..." id="searchBar"/>
+        <div class="perfil">👤 Perfil</div>
+    </header>
+    
+    <div class="container">
+        <nav>
+            <ul>
+                <li>🏠 Inicio</li>
+                <li><a href="perfil.html" style="color: inherit; text-decoration: none;">👤 Perfil</a></li>
+                <li><a href="artista.html?nombre=Post%20Malone" style="color: inherit; text-decoration: none;">🎵 Artistas</a></li>
+                <li><a href="game.html" style="color: inherit; text-decoration: none;">🎮 Juego</a></li>
+                <li><a href="#" id="logout" style="color: inherit; text-decoration: none;">🚪 Cerrar sesión</a></li>
+            </ul>
+        </nav>
+        
+        <main id="juego">
+            <h2>¡Adivina la Canción!</h2>
+            <div id="informacionJuego">
+                <p id="contador">Acertadas/Generadas: 0/0</p>
+                <div id="audioContainer">
+                    <audio id="cancion" controls></audio>
+                </div>
+                <input type="text" id="respuesta" placeholder="Escribe el nombre de la canción">
+                <button id="verificarRespuesta">Verificar</button>
+                <p id="feedback"></p>
+            </div>
+        </main>
+    </div>
+    
+    <footer class="footer-principal">
+        <div class="footer-contenido">
+            <div class="footer-secciones">
+                <div class="footer-columna">
+                    <h3>Obsidian Music</h3>
+                    <ul>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Términos de uso</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Ayuda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-columna">
+                    <h3>Contacto</h3>
+                    <ul class="footer-contacto">
+                        <li>📍 Sevilla, España</li>
+                        <li>📞 +34 654 321 987</li>
+                        <li>✉️ soporte@obsidianmusic.com</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="footer-copy">&copy; 2025 Obsidian Music. Todos los derechos reservados.</p>
         </div>
-        <div class="artist-card" data-artist="artist2">
-          <img src="./assets/img/elden-ring-sote-messmer-1.jpg" alt="Artista 2" />
-          <p>El empalador</p>
-        </div>
-        <div class="artist-card" data-artist="artist3">
-          <img src="assets/img/postmalone.webp" alt="Artista 3" />
-          <p>Post Malone</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="game" style="display: none;">
-      <audio id="audio"></audio>
-      <button id="play">Reproducir</button>
-      
-      <input type="text" id="guess" placeholder="Escribe el nombre de la canción" />
-      <button id="check">Comprobar</button>
-      
-      <p id="result"></p>
-    </section>
-  </div>
-
-  <script>
-    const artistCards = document.querySelectorAll(".artist-card");
-    artistCards.forEach(card => {
-      card.addEventListener("click", () => {
-        const artist = card.dataset.artist;
-        localStorage.setItem("selectedArtist", artist);
-        window.location.href = "ingame.html";
-      });
-    });
-  </script>
-  
-  <script src="./js/game.js"></script>
+    </footer>
+    
+    <script src="js/cancionesExtras_controlado.js"></script>
+    <script src="js/game.js"></script>
 </body>
 </html>

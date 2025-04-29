@@ -8,6 +8,13 @@
 
   <!-- Enlazamos el CSS principal con todo el diseño y estilo que sigue la estética de Spotify -->
   <link rel="stylesheet" href="css/style.css"/>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Arvo&display=swap"
+  rel="stylesheet" />
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+  rel="stylesheet" />
 </head>
 
 <body>
@@ -52,6 +59,23 @@
       </section>
 
       <section class="novedades">
+        <h2 class="titulo-seccion"></h2>
+              <div class="press-contenido">
+                <div class="cita-contenedor">
+                  <!-- Usamos un símbolo de comilla en unicode -->
+
+                  <span class="cita-icono">&#8220;</span>
+
+                  <p class="frase">"Gracias a la plataforma de OMusic, descubrí artistas y proyectos 
+                    a los que jamás habría accedido a través de las plataformas convencionales.
+                    ¡La recomendaré siempre!"
+                  </p>
+                </div>
+                <p class="autor">Steven Wilson</p>
+              </div>
+      </section>
+
+      <section class="novedades">
         <h2 class="titulo-seccion">Novedades</h2>
         <div class="contenedor-novedades">
           <div class="tarjeta-novedad">
@@ -70,6 +94,8 @@
           </div>
         </div>
       </section>
+
+      
 
       <!-- OTROS ARTISTAS (decorativos, sin clics) -->
       <section>
@@ -117,7 +143,6 @@
   </div>
 </footer>
 
- 
 
   <!-- Enlace a los scripts donde controlamos todo lo interactivo de la página -->
   <script src="js/listartistas.js"></script>

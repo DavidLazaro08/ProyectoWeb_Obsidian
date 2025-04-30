@@ -8,7 +8,6 @@ body {
   transition: opacity 0.4s ease;
 }
 
-
 /* ===== CABECERA SUPERIOR ===== */
 header {
   background: linear-gradient(to left, #1db985, #073c38);
@@ -22,7 +21,7 @@ header input {
   width: 40%;
   padding: 8px;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .suscripcion, .perfil {
@@ -35,12 +34,24 @@ header .suscripcion a,
 header .perfil a {
   color: white;
   text-decoration: none;
-  transition: color 0.3s;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
 }
 
 header .suscripcion a:hover,
 header .perfil a:hover {
-  color: #1db985;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.15em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
 }
 
 
@@ -63,22 +74,39 @@ nav ul {
 }
 
 nav li {
-  padding: 10px 0;
+  padding: 12px 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  font-size: 1.1em;
+  font-size: 1.05em;
+  font-weight: bold; /* NUEVO: negrita para más presencia */
+  border-radius: 30px;
   color: #ccc;
-  transition: all 0.6s ease;
-  padding-left: 15px;
-  border-left: 15px solid transparent;
+  transition: all 1.3s ease;
+  border-left: 4px solid transparent;
+  gap: 10px;
 }
 
 nav li:hover {
   background-color: #1db985;
   color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-left: 5px solid #1db985;
+  border-left: 4px solid #1db985;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav li.activo {
+  background-color: #1db985;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px 16px;
+}
+
+nav li.activo a {
+  color: white;
+  text-decoration: none;
 }
 
 

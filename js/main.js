@@ -92,7 +92,7 @@ const cancionesExtras = [
   { titulo: "Under Pressure | Queen", archivo: "UnderPressure.MP3" },
   { titulo: "Anuncio 8", archivo: "Ra8.mp3", artista: "Publicidad Radio" },
   { titulo: "El Sitio De Mi Recreo | Antonio Vega", archivo: "ElSitioDeMiRecreo.mp3" },
-  { titulo: "Vivir Para Contarlo | Violadores Del Verso", archivo: "VivirParaContarlo.MP3" },
+  { titulo: "Vivir Para Contarlo | Doble V", archivo: "VivirParaContarlo.MP3" },
   { titulo: "Cheese | Juaninacka", archivo: "Cheese.mp3" },
   { titulo: "Rhythm Takes Control | 666", archivo: "RhythmTakesControl.MP3" },
   { titulo: "Enjoy The Silence | Depeche Mode", archivo: "EnjoyTheSilence.mp3" },

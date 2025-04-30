@@ -26,18 +26,25 @@
 
 .menu-artistas li {
   list-style: none;
-  padding: 8px;
-  margin-bottom: 6px;
+  padding: 12px 10px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  font-weight: bold;
   color: #ccc;
+  transition: all 0.6s ease;
+  border-left: 4px solid transparent;
+  gap: 10px;
 }
 
 .menu-artistas li:hover {
   background-color: #1db985;
-  color: #073c38;
+  color: white;
+  border-left: 4px solid #1db985;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 /* ===== COLUMNA CENTRAL ===== */
 /* Aquí se muestra el nombre del artista, estilo y canciones */
@@ -86,7 +93,7 @@
   padding: 10px;
   background: linear-gradient(to right, #1db985, #073c38);
   color: white;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 3em;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
@@ -114,7 +121,7 @@
   margin: 0 10px;
   padding: 10px 18px;
   border: none;
-  border-radius: 30px;
+  border-radius: 10px;
   background-color: #1db985;
   color: white;
   font-weight: bold;

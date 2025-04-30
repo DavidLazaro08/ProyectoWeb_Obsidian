@@ -102,10 +102,10 @@ const cancionesExtras = [
   { titulo: "Never Again | Milk Inc", archivo: "NeverAgain.mp3" },
   { titulo: "Rainbow In The Sky | Starsplash", archivo: "RainbowInTheSky.mp3" },
   { titulo: "Alba | Antonio Flores", archivo: "Alba.MP3" },
-  { titulo: "DiasDeVerano | Amaral", archivo: "DiasDeVerano.mp3" },
+  { titulo: "Dias De Verano | Amaral", archivo: "DiasDeVerano.mp3" },
   { titulo: "Anuncio 10", archivo: "Ra10.mp3", artista: "Publicidad Radio" },
   { titulo: "Todo Se Transforma | Jorge Drexler", archivo: "TodoSeTransforma.MP3" },
-  { titulo: "TamboresDeGuerra | Manuel Carrasco", archivo: "TamboresDeGuerra.mp3" },
+  { titulo: "Tambores De Guerra | Manuel Carrasco", archivo: "TamboresDeGuerra.mp3" },
   { titulo: "Crawling | Linkin Park", archivo: "Crawling.mp3" },
   { titulo: "Pop | N Sync", archivo: "Pop.MP3" },
   { titulo: "Rosa María | Maita Vende Ca", archivo: "RosaMaria.mp3" },
@@ -132,6 +132,8 @@ const cancionesExtras = [
   { titulo: "Diosa | Mike Towers", archivo: "diosa.mp3" },
   { titulo: "First Of The Year | Skrillex", archivo: "equinox.mp3" },
   { titulo: "TV Off | Kendrick Lamar", archivo: "Kendrick_tvoff.mp3" },
+  { titulo: "Shape of You | Ed Sheeran", archivo: "EdShape.mp3" },
+  { titulo: "Invisible | Duran Duran", archivo: "DuranInvisible.mp3" }
 ];
  
 const reproductor = document.getElementById("reproductorGlobal");
@@ -152,6 +154,20 @@ reproductor.addEventListener("ended", () => {
   etiquetaNombre.textContent = aleatoria.titulo;
 });
 
+// Scroll animado dentro de artistas decorativos
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollBtn = document.getElementById("scrollAbajo");
+  const contenedor = document.getElementById("artistasDecorativos");
+
+  if (scrollBtn && contenedor) {
+    scrollBtn.addEventListener("click", () => {
+      contenedor.scrollBy({
+        top: 200,
+        behavior: "smooth"
+      });
+    });
+  }
+});
 
 
 

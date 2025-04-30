@@ -8,13 +8,8 @@
 
   <!-- Enlazamos el CSS principal con todo el diseño y estilo que sigue la estética de Spotify -->
   <link rel="stylesheet" href="css/style.css"/>
-  <link
-  href="https://fonts.googleapis.com/css2?family=Arvo&display=swap"
-  rel="stylesheet" />
-
-<link
-  href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
-  rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -24,26 +19,24 @@
   <header>
     <div class="logo">🎧 <b>Obsidian Music</b></div>
     <input type="text" placeholder="Buscar artistas..." id="searchBar"/>
-    <div class="perfil">👤 Perfil</div>
+    <div class="suscripcion"><a href="suscripcion.html">🪙 Suscríbete</a></div>
+    <div class="perfil"><a href="perfil.html">👤 Perfil</a></div>
   </header>
-
 
   <!-- Aquí empieza la estructura principal de la página, dividida en un menú lateral y el contenido central -->
   <div class="container">
 
     <!-- Menú lateral con accesos a Inicio, Perfil, Artistas y el juego musical (aún por hacerse) -->
     <!-- No está conectado aún, pero está ahí para simular la navegación típica de una app -->
-    
     <nav>
       <ul>
-        <li>🏠 Inicio</li>
+        <li><a href="index.html" style="color: inherit; text-decoration: none;">🏡 Inicio</a></li>
         <li><a href="perfil.html" style="color: inherit; text-decoration: none;">👤 Perfil</a></li>
         <li><a href="artista.html?nombre=Post%20Malone" style="color: inherit; text-decoration: none;">🎵 Artistas</a></li>
         <li><a href="game.html" style="color: inherit; text-decoration: none;">🎮 Juego</a></li>
         <li><a href="#" id="logout" style="color: inherit; text-decoration: none;">🚪 Cerrar sesión</a></li>
       </ul>
     </nav>
-    
 
     <!-- Zona donde mostramos lo más importante, los artistas -->
     <main>
@@ -52,50 +45,49 @@
       <!-- Título de la sección de artistas que el usuario puede explorar -->
       <section>
         <h2>Artistas destacados</h2>
-
         <!-- Aquí se van cargando las tarjetas de los artistas con JS -->
         <!-- Solo 4 o 5 de ellos tienen funcionalidad real, pero visualmente simula una web completa -->
         <div class="zona-artistas" id="zonaArtistas"></div>
       </section>
 
       <section class="novedades">
-        <h2 class="titulo-seccion"></h2>
-              <div class="press-contenido">
-                <div class="cita-contenedor">
-                  <!-- Usamos un símbolo de comilla en unicode -->
-
-                  <span class="cita-icono">&#8220;</span>
-
-                  <p class="frase">"Gracias a la plataforma de OMusic, descubrí artistas y proyectos 
-                    a los que jamás habría accedido a través de las plataformas convencionales.
-                    ¡La recomendaré siempre!"
-                  </p>
-                </div>
-                <p class="autor">Steven Wilson</p>
-              </div>
+        <div class="press-contenido">
+          <div class="cita-contenedor">
+            <!-- Usamos un símbolo de comilla en unicode -->
+            <span class="cita-icono">&#8220;</span>
+            <p class="frase">"Gracias a la plataforma de OMusic, descubrí artistas y proyectos 
+              a los que jamás habría accedido a través de las plataformas convencionales.
+              ¡La recomendaré siempre!"
+            </p>
+          </div>
+          <p class="autor">Steven Wilson</p>
+          <div style="text-align: center; margin-top: 15px;">
+            <a href="suscripcion.html" class="btn-premium">🪙 Prueba el plan Premium</a>
+          </div>
+        </div>
       </section>
 
       <section class="novedades">
         <h2 class="titulo-seccion">Novedades</h2>
         <div class="contenedor-novedades">
           <div class="tarjeta-novedad">
-            <img src="img/novedad1.jpeg" alt="Alejandro Sanz" />
+            <img src="assets/img/novedades1.jpg" alt="Alejandro Sanz" />
             <div class="texto-novedad">
-              <h4>DÍA DE LA LENGUA ESPAÑOLA</h4>
-              <p>Alejandro Sanz: mis letras favoritas en español</p>
+              <h4>💿 LANZAMIENTOS DE LA SEMANA</h4>
+              <p>Descubre los temas que acaban de salir del horno: electrónica, 
+                pop y urbano se mezclan en la selección más fresca.</p>
             </div>
           </div>
           <div class="tarjeta-novedad">
-            <img src="img/novedad2.jpeg" alt="Letras Atlántico" />
+            <img src="assets/img/novedades2.jpg" alt="Letras Atlántico" />
             <div class="texto-novedad">
-              <h4>DÍA DE LA LENGUA ESPAÑOLA</h4>
-              <p>Las letras favoritas de artistas de ambos lados del Atlántico</p>
+              <h4>🎤 POP FEMENINO: NUEVAS VOCES</h4>
+              <p>Aitana, Vicco, Paula Koops y Emilia marcan tendencia con los 
+                estrenos que están revolucionando las playlists del mes.</p>
             </div>
           </div>
         </div>
       </section>
-
-      
 
       <!-- OTROS ARTISTAS (decorativos, sin clics) -->
       <section>
@@ -103,53 +95,52 @@
         <div class="zona-artistas" id="artistasDecorativos">
           <!-- JS meterá las tarjetas decorativas aquí -->
         </div>
+        <div style="text-align:center; margin-top: 10px;">
+          <button id="scrollAbajo" class="btn-scroll">🎶 Ver más artistas</button>
+        </div>
       </section>
 
     </main>
   </div>
 
-
-<!-- Reproductor aleatorio fijo -->
-<div id="reproductorFijo">
-  <div class="reproductor-lineal">
-    <button id="btnAleatorio" class="btn-reproducir">🎵<span><b>Canción Aleatoria</b></span></button>
-    <div id="cancionActual" class="nombre-cancion"></div>
-    <audio id="reproductorGlobal" controls></audio>
-  </div>
-</div>
-
-<footer class="footer-principal">
-  <div class="footer-contenido">
-    <div class="footer-secciones">
-      <div class="footer-columna">
-        <h3>Obsidian Music</h3>
-        <ul>
-          <li><a href="#">Contacto</a></li>
-          <li><a href="#">Términos de uso</a></li>
-          <li><a href="#">Política de privacidad</a></li>
-          <li><a href="#">Ayuda</a></li>
-        </ul>
-      </div>
-      <div class="footer-columna">
-        <h3>Contacto</h3>
-        <ul class="footer-contacto">
-          <li>📍 Sevilla, España</li>
-          <li>📞 +34 654 321 987</li>
-          <li>✉️ soporte@obsidianmusic.com</li>
-        </ul>
-      </div>
+  <!-- Reproductor aleatorio fijo -->
+  <div id="reproductorFijo">
+    <div class="reproductor-lineal">
+      <button id="btnAleatorio" class="btn-reproducir">🎵<span><b>Canción Aleatoria</b></span></button>
+      <div id="cancionActual" class="nombre-cancion"></div>
+      <audio id="reproductorGlobal" controls></audio>
     </div>
-    <p class="footer-copy">&copy; 2025 Obsidian Music. Todos los derechos reservados.</p>
   </div>
-</footer>
 
+  <footer class="footer-principal">
+    <div class="footer-contenido">
+      <div class="footer-secciones">
+        <div class="footer-columna">
+          <h3>Obsidian Music</h3>
+          <ul>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Ayuda</a></li>
+          </ul>
+        </div>
+        <div class="footer-columna">
+          <h3>Contacto</h3>
+          <ul class="footer-contacto">
+            <li>📍 Sevilla, España</li>
+            <li>📞 +34 654 321 987</li>
+            <li>✉️ soporte@obsidianmusic.com</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2025 Obsidian Music. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
   <!-- Enlace a los scripts donde controlamos todo lo interactivo de la página -->
   <script src="js/listartistas.js"></script>
   <script src="js/transition.js"></script>
   <script src="js/main.js"></script>
-
-
 
 </body>
 </html>

@@ -2,26 +2,22 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(180deg, #121212 0%, #0d2326 50%, #121212 100%); 
+  background: linear-gradient(180deg, #121212 0%, #0d2326 50%, #121212 100%);
   color: white;
-
   opacity: 1;
   transition: opacity 0.4s ease;
 }
-/* Fondo oscuro tipo Spotify, fuente clara y estilo limpio */
 
 
 /* ===== CABECERA SUPERIOR ===== */
-/* Esta parte es la barra superior de la web, con el logo, la búsqueda y el perfil */
 header {
-  background: linear-gradient(to left, #1db985, #073c38); /* degradado verde a verde-azulado */
+  background: linear-gradient(to left, #1db985, #073c38);
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Barra de búsqueda centrada */
 header input {
   width: 40%;
   padding: 8px;
@@ -29,29 +25,43 @@ header input {
   border-radius: 20px;
 }
 
+.suscripcion, .perfil {
+  font-size: 1em;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+header .suscripcion a,
+header .perfil a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header .suscripcion a:hover,
+header .perfil a:hover {
+  color: #1db985;
+}
+
+
 /* ===== ESTRUCTURA GENERAL ===== */
-/* Container principal que reparte el espacio entre menú lateral y contenido principal */
 .container {
   display: flex;
 }
 
-/* ===== MENÚ LATERAL ===== */
-/* Menú lateral izquierdo con fondo oscuro y enlaces verticales */
 nav {
   width: 200px;
   background-color: #121212;
   padding: 20px;
-  border-radius: 10px; /* Bordes redondeados para que se vea más elegante */
-  box-shadow: 4px 0 6px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+  border-radius: 10px;
+  box-shadow: 4px 0 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos para la lista sin bullets */
 nav ul {
   list-style: none;
   padding: 0;
 }
 
-/* Estilos para los elementos de la lista */
 nav li {
   padding: 10px 0;
   cursor: pointer;
@@ -60,692 +70,214 @@ nav li {
   font-size: 1.1em;
   color: #ccc;
   transition: all 0.6s ease;
-  border-radius: 5px;
   padding-left: 15px;
   border-left: 15px solid transparent;
 }
 
-/* Cambiar color de fondo y otros efectos al pasar el mouse */
 nav li:hover {
-  background-color: #1db985; /* Verde que usas en la web */
+  background-color: #1db985;
   color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-left: 5px solid #1db985; /* Borde izquierdo verde */
+  border-left: 5px solid #1db985;
 }
 
-/* ===== CONTENIDO PRINCIPAL ===== */
-/* Aquí se muestra todo lo importante: artistas y su información */
+
+/* ===== CONTENIDO PRINCIPAL: PERFIL ===== */
 main {
   flex: 1;
   padding: 20px;
 }
 
-/* ===== TARJETAS DE ARTISTAS ===== */
-/* Zona donde se colocan las tarjetas de los artistas */
-.zona-artistas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-/* Diseño visual de cada artista */
-.tarjeta-artista {
-  background-color: #203a3e;
-  padding: 10px;
-  width: 150px;
-  text-align: center;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.8s, transform 0.8s ease-in-out; /* Transición lenta */
-}
-
-.tarjeta-artista:hover {
-  background-color: #1db985; /* Cambiar color de fondo al pasar */
-  color: #073c38; /* Cambiar color de texto al pasar */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar */
-  transform: scale(1.05); /* Efecto de zoom */
-}
-
-.tarjeta-artista img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* Estilo para la sección de artistas destacados */
-section:first-of-type {
-  background-color: #0d2326; 
-  padding: 20px;
-  border-radius: 10px;
+#perfil {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-section:first-of-type h2 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 15px;
-  color: #1db985;
-  border-bottom: 3px solid #1db985;
-  padding-bottom: 5px;
-}
-
-/* Estilo para la sección de artistas decorativos */
-section:last-of-type {
-  background-color: #203a3e;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-section:last-of-type h2 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 15px;
-  color: #ccc;
-  border-bottom: 3px solid #ccc;
-  padding-bottom: 5px;
-}
-
-/* Personalizar el reproductor de audio */
-audio {
-  width: 50%;
-  display: block;
-  margin: 20px auto;
-  border-radius: 10px;  /* Bordes redondeados */
-  background-color: #2c3f52; /* Fondo oscuro */
-  border: 2px solid #1db985;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  padding: 5px;
-}
-
-audio::-webkit-media-controls-panel {
-  background: #2c4952;
-  border-radius: 8px;
-}
-
-audio::-webkit-media-controls-play-button {
-  background-color: #1db985;
-  border-radius: 50%;
-  padding: 10px;
-}
-
-audio::-webkit-media-controls-volume-slider {
-  background-color: #1db985;
-}
-
-/* Estilo para el enlace de "Más info" */
-.more-info-link {
-  display: inline-block;
-  margin-top: 20px;
-  color: #1db985;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #333;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.more-info-link:hover {
-  color: #073c38;
-  background-color: #1db985;
-  text-decoration: underline;
-}
-
-/* Agregar margen superior para la siguiente sección */
-section + section {
-  margin-top: 30px;
-}
-
-/* Agregar margen debajo del contenedor + Más info */
-#infoArtista a {
-  margin-top: 20px;
-}
-
-/* Estilo para la sección de discografía */
-.discografia {
+.perfil-header {
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 20px;
+  margin-bottom: 30px;
 }
 
-
-.album {
-  text-align: center;
+.perfil-img-container {
+  position: relative;
   width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.album img {
+.perfil-img {
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
 }
 
-.album audio {
-  margin-top: 10px;
-  width: 100%;
-  border-radius: 5px;
-  background-color: #1e1e1e;
-  border: 2px solid #1db985;
-  padding: 5px;
-}
-
-.artist-detail {
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.artist-image {
-  width: 80%;
-  border-radius: 10px;
-  justify-content: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-}
-
-#reproductorFijo {
-  position: fixed;
-  bottom: 0;
+.overlay {
+  position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
-  background-color: #121212;
-  padding: 4px 16px;
-  z-index: 1000;
-  border-top: 1px solid #222;
-}
-
-.reproductor-lineal {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-}
-
-#reproductorFijo audio {
-  width: 100%;
-  max-width: 550px;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-  outline: none;
-  color-scheme: dark;
-  height: 32px;
-}
-
-.btn-reproducir {
-  background-color: #1db985;
-  border: none;
-  color: #fff;
-  font-size: 1em;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.btn-reproducir:hover {
-  background-color: #17a674;
-}
-
-.nombre-cancion {
-  color: white;
-  font-size: 0.9em;
-  opacity: 0.9;
-  width: 250px;             
-  text-align: left;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: inline-block;
-}
-
-
-
-
-/* ========================================= */
-
-
-/* ===== ESTILOS AÑADIDOS DESDE artista.css (antes separado) ===== */
-
-/* ===== VISTA DETALLADA DE ARTISTA (ESTILO SPOTIFY) ===== */
-/* Esta hoja de estilo complementa la general (style.css) y se aplica solo a artista.html */
-
- 
-  /* Vista principal dividida en tres columnas */
-  .vista-artista {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  /* ===== COLUMNA IZQUIERDA ===== */
-  /* Lista de artistas (funciona como navegación lateral en esta página) */
-  .menu-artistas {
-    width: 200px;
-    background-color: #121212;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  }
-  
-  .menu-artistas h3 {
-    color: #1db985;
-    margin-bottom: 10px;
-    font-size: 1.1em;
-  }
-  
-  .menu-artistas li {
-    list-style: none;
-    padding: 8px;
-    margin-bottom: 6px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    color: #ccc;
-  }
-  
-  .menu-artistas li:hover {
-    background-color: #1db985;
-    color: #073c38;
-  }
-  
-  /* ===== COLUMNA CENTRAL ===== */
-  /* Aquí se muestra el nombre del artista, estilo y canciones */
-  .contenido-artista {
-    flex: 2;
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-  
-  .contenido-artista h1 {
-    font-size: 2em;
-    margin-bottom: 5px;
-    color: #1db985;
-  }
-  
-  .contenido-artista p {
-    color: #aaa;
-    margin-bottom: 20px;
-  }
-  
-  .contenido-artista ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .contenido-artista li {
-    padding: 10px 0;
-    border-bottom: 1px solid #444;
-    font-size: 1em;
-    display: flex;
-    justify-content: space-between;
-    color: #eee;
-  }
-  
-  /* ===== COLUMNA DERECHA ===== */
-  /* Muestra la bio y la carátula de disco (o del artista) */
-  .info-artista {
-    width: 250px;
-    background-color: #203a3e;
-    padding: 15px;
-    border-radius: 10px;
-    color: white;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  }
-  
-  .info-artista img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-  
-  .info-artista h4 {
-    margin-bottom: 10px;
-    color: #1db985;
-  }
-  
-  .info-artista p {
-    font-size: 0.9em;
-    line-height: 1.4;
-    color: #ccc;
-  }
-  
-  .volver-wrapper {
-    padding: 10px 20px;
-  }
-  
-  .volver-link {
-    color: #1db985;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: color 0.3s;
-  }
-  
-  .volver-link:hover {
-    color: #ffffff;
-  }
-
-  /* Transición suave al cambiar de página */
-
-
-body.fade-out {
   opacity: 0;
-  transition: opacity 0.4s ease-out;
-}
-
-.artista-cabecera {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.artista-cabecera h1 {
-  width: 70%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 10px;
-  background: linear-gradient(to right, #1db985, #073c38);
-  color: white;
-  border-radius: 8px;
-  font-size: 3em;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-
-.artista-cabecera .estilo {
-  color: #1db985;
-  font-size: 1.2em;
-  margin-bottom: 5px;
-}
-
-.artista-cabecera .oyentes {
-  color: #bbb;
-  font-size: 0.9em;
-}
-
-.acciones-artista {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.acciones-artista button {
-  margin: 0 10px;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 30px;
-  background-color: #1db985;
-  color: white;
+  transition: 0.3s ease;
   font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  font-size: 1em;
+  text-align: center;
 }
 
-.acciones-artista button:hover {
-  background-color: #17a674;
+.perfil-img-container:hover .overlay {
+  opacity: 1;
 }
 
-.subtitulo {
+.perfil-nombre {
   font-size: 1.5em;
-  color: white;
-  margin-top: 30px;
+  color: #1db985;
+  margin: 0;
+}
+
+.perfil-bloque {
+  margin-bottom: 40px;
+}
+
+.perfil-bloque h2 {
+  font-size: 1.5em;
+  color: #1db985;
+  margin-bottom: 20px;
   border-bottom: 2px solid #1db985;
   padding-bottom: 5px;
 }
 
-.letras-artista {
-  background-color: #121212;
-  color: #ccc;
-  padding: 15px;
-  border-radius: 8px;
-  margin-top: 10px;
-  white-space: pre-wrap;
+.artista-popular {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
+.artista-popular img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
-
-.album {
-  width: 180px;
-  background-color: #0d2326;
-  border-radius: 10px;
-  padding: 10px;
+.artista-popular p {
   color: white;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.artista-popular span {
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+.canciones-populares {
+  list-style: decimal;
+  color: white;
+  padding-left: 20px;
+}
+
+.canciones-populares li {
+  margin-bottom: 15px;
+  padding: 20px;
+  font-size: 1.1em;
+}
+
+.cancion-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  vertical-align: middle;
+}
+
+
+/* ===== FOOTER ===== */
+.footer-principal {
+  background-color: #111;
+  color: #ccc;
+  padding: 30px 20px;
+  border-top: 1px solid #1db985;
+  font-size: 0.95em;
+  margin-bottom: 10px;
+}
+
+.footer-contenido {
+  max-width: 600px;
+  margin: 0 auto;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.album img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 8px;
+.footer-secciones {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.footer-columna {
+  min-width: 200px;
+}
+
+.footer-columna h3 {
+  color: #1db985;
+  font-size: 1.1em;
+}
+
+.footer-columna ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.footer-columna li {
+  margin: 8px 0;
+}
+
+.footer-columna a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-columna a:hover {
+  color: #1db985;
+}
+
+.footer-contacto li {
+  color: #ccc;
+  font-weight: 400;
+  font-size: 0.95em;
+}
+
+.footer-copy {
+  color: #666;
+  font-size: 0.85em;
 }
 
 
-/* ===== PERFIL ===== */
-#perfil {
-    background-color: #111;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Encabezado con imagen de perfil y nombre */
-  .perfil-header {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 30px;
-  }
-  
-  .perfil-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  }
-  
-  .perfil-nombre {
-    font-size: 2.5em;
-    margin: 0;
-  }
-  
-  .perfil-detalles {
-    color: #ccc;
-    font-size: 1em;
-    margin: 5px 0 0;
-  }
-  
-  /* Bloques de artistas o canciones */
-  .perfil-bloque {
-    margin-bottom: 40px;
-  }
-  
-  .perfil-bloque h2 {
-    font-size: 1.8em;
-    color: #1db985;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #1db985;
-    padding-bottom: 5px;
-  }
-  
-  /* Artista popular */
-  .artista-popular {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .artista-popular img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .artista-popular p {
-    color: white;
-    margin: 0;
-    font-size: 1.2em;
-  }
-  
-  .artista-popular span {
-    font-size: 0.9em;
-    color: #aaa;
-  }
-  
-  /* Canciones populares */
-  .canciones-populares {
-    list-style: decimal;
-    color: white;
-    padding-left: 20px;
-  }
-  
-  .canciones-populares li {
-    margin-bottom: 15px;
-    font-size: 1.1em;
-  }
-  
-  /* Botón para volver al inicio */
-  .boton-volver {
-    display: inline-block;
-    margin-top: 20px;
-    background-color: #1db985;
-    color: #073c38;
-    padding: 10px 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-  
-  .boton-volver:hover {
-    background-color: #15a174;
-    color: white;
-    text-decoration: underline;
-  }
-  
-  .perfil-img-container {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  .perfil-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: 0.3s ease;
-    font-weight: bold;
-    font-size: 1em;
-    text-align: center;
-  }
-  
-  .perfil-img-container:hover .overlay {
-    opacity: 1;
-  }
-  
-  .cancion-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    vertical-align: middle;
-  }
-  
-  .footer-principal {
-    background-color: #111;
-    color: #ccc;
-    padding: 30px 20px;
-    border-top: 1px solid #1db985;
-    font-size: 0.95em;
-    margin-bottom: 10px;
-  }
-  
-  .footer-contenido {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .footer-secciones {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-bottom: 30px;
-    text-align: left;
-  }
-  
-  .footer-columna {
-    min-width: 200px;
-  }
-  
-  .footer-columna h3 {
-    color: #1db985;
-    font-size: 1.1em;
-  
-  }
-  
-  .footer-columna ul {
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-  }
-  
-  .footer-columna li {
-    margin: 8px 0;
-  }
-  
-  .footer-columna a {
-    color: #aaa;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-columna a:hover {
-    color: #1db985;
-  }
-  
-  .footer-contacto li {
-    color: #ccc;
-    font-weight: 400;
-    font-size: 0.95em;
-  }
-  
-  .footer-copy {
-    color: #666;
-    font-size: 0.85em;
-  }
-
+/* ===== TRANSICIÓN PÁGINA ===== */
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}

@@ -74,6 +74,17 @@ if (artistaActivo) {
     </div>
   `;
 
+  // Activar audio al hacer clic en "Reproducir"
+  const btnReproducir = document.querySelector(".btn-reproducir");
+  const audio = document.querySelector("audio");
+
+  if (btnReproducir && audio) {
+    btnReproducir.addEventListener("click", () => {
+      audio.play();
+    });
+  }
+
+
   // DERECHA: Imagen y bio
   infoArtistaLateral.innerHTML = `
     <img src="assets/img/${artistaActivo.img}" alt="${artistaActivo.name}">

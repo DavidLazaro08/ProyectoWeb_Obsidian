@@ -29,11 +29,31 @@ header input {
   border-radius: 20px;
 }
 
+.suscripcion, .perfil {
+  font-size: 1em;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+header .suscripcion a,
+header .perfil a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header .suscripcion a:hover,
+header .perfil a:hover {
+  color: #1a1a1a;
+}
+
+
 /* ===== ESTRUCTURA GENERAL ===== */
 /* Container principal que reparte el espacio entre menú lateral y contenido principal */
 .container {
   display: flex;
 }
+
 
 /* ===== MENÚ LATERAL ===== */
 /* Menú lateral izquierdo con fondo oscuro y enlaces verticales */
@@ -41,17 +61,15 @@ nav {
   width: 200px;
   background-color: #121212;
   padding: 20px;
-  border-radius: 10px; /* Bordes redondeados para que se vea más elegante */
-  box-shadow: 4px 0 6px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+  border-radius: 10px;
+  box-shadow: 4px 0 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos para la lista sin bullets */
 nav ul {
   list-style: none;
   padding: 0;
 }
 
-/* Estilos para los elementos de la lista */
 nav li {
   padding: 10px 0;
   cursor: pointer;
@@ -60,35 +78,30 @@ nav li {
   font-size: 1.1em;
   color: #ccc;
   transition: all 0.6s ease;
-  border-radius: 5px;
   padding-left: 15px;
   border-left: 15px solid transparent;
 }
 
-/* Cambiar color de fondo y otros efectos al pasar el mouse */
 nav li:hover {
-  background-color: #1db985; /* Verde que usas en la web */
+  background-color: #1db985;
   color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-left: 5px solid #1db985; /* Borde izquierdo verde */
+  border-left: 5px solid #1db985;
 }
 
+
 /* ===== CONTENIDO PRINCIPAL ===== */
-/* Aquí se muestra todo lo importante: artistas y su información */
 main {
   flex: 1;
   padding: 20px;
 }
 
-/* ===== TARJETAS DE ARTISTAS ===== */
-/* Zona donde se colocan las tarjetas de los artistas */
 .zona-artistas {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
 }
 
-/* Diseño visual de cada artista */
 .tarjeta-artista {
   background-color: #203a3e;
   padding: 10px;
@@ -96,14 +109,14 @@ main {
   text-align: center;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.8s, transform 0.8s ease-in-out; /* Transición lenta */
+  transition: background-color 0.8s, transform 0.8s ease-in-out;
 }
 
 .tarjeta-artista:hover {
-  background-color: #1db985; /* Cambiar color de fondo al pasar */
-  color: #073c38; /* Cambiar color de texto al pasar */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar */
-  transform: scale(1.05); /* Efecto de zoom */
+  background-color: #1db985;
+  color: #073c38;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
 .tarjeta-artista img {
@@ -111,7 +124,6 @@ main {
   border-radius: 10px;
 }
 
-/* Estilo para la sección de artistas destacados */
 section:first-of-type {
   background-color: #0d2326; 
   padding: 20px;
@@ -128,7 +140,6 @@ section:first-of-type h2 {
   padding-bottom: 5px;
 }
 
-/* Estilo para la sección de artistas decorativos */
 section:last-of-type {
   background-color: #203a3e;
   padding: 20px;
@@ -145,109 +156,179 @@ section:last-of-type h2 {
   padding-bottom: 5px;
 }
 
-/* Personalizar el reproductor de audio */
-audio {
-  width: 50%;
-  display: block;
-  margin: 20px auto;
-  border-radius: 10px;  /* Bordes redondeados */
-  background-color: #2c3f52; /* Fondo oscuro */
-  border: 2px solid #1db985;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  padding: 5px;
-}
-
-audio::-webkit-media-controls-panel {
-  background: #2c4952;
-  border-radius: 8px;
-}
-
-audio::-webkit-media-controls-play-button {
-  background-color: #1db985;
-  border-radius: 50%;
-  padding: 10px;
-}
-
-audio::-webkit-media-controls-volume-slider {
-  background-color: #1db985;
-}
-
-/* Estilo para el enlace de "Más info" */
-.more-info-link {
-  display: inline-block;
-  margin-top: 20px;
-  color: #1db985;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #333;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.more-info-link:hover {
-  color: #073c38;
-  background-color: #1db985;
-  text-decoration: underline;
-}
-
 /* Agregar margen superior para la siguiente sección */
 section + section {
   margin-top: 30px;
 }
 
-/* Agregar margen debajo del contenedor + Más info */
-#infoArtista a {
-  margin-top: 20px;
-}
 
-/* Estilo para la sección de discografía */
-.discografia {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+/* ===== NOVEDADES ===== */
+.novedades {
   margin-bottom: 40px;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
-
-.album {
+.novedades h2 {
   text-align: center;
-  width: 150px;
+  font-size: 2em;
+  margin-bottom: 25px;
+  color: #1db985;
+  border-bottom: 3px solid #1db985;
+  padding-bottom: 10px;
 }
 
-.album img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.album audio {
-  margin-top: 10px;
-  width: 100%;
-  border-radius: 5px;
-  background-color: #1e1e1e;
-  border: 2px solid #1db985;
-  padding: 5px;
-}
-
-.artist-detail {
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.artist-image {
-  width: 80%;
-  border-radius: 10px;
+.contenedor-novedades {
+  display: flex;
+  gap: 20px;
   justify-content: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
+.tarjeta-novedad {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 20px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.tarjeta-novedad:hover {
+  transform: scale(1.03);
+}
+
+.tarjeta-novedad img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tarjeta-novedad p {
+  text-align: justify;
+}
+
+/* Cita de usuario */
+.press-contenido {
+  padding: 20px;
+  margin: 50px;
+  border-radius: 30px;
+  position: relative;
+  background-color: #1db985;
+  border-left: 5px solid #203a3e;
+}
+
+.cita-contenedor {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  margin-bottom: -15px;
+}
+
+.cita-icono {
+  font-size: 80px;
+  font-family: "Georgia", serif;
+  color: #203a3e;
+  line-height: 0.6;
+  margin-right: 30px;
+  margin-left: 5px;
+}
+
+.frase {
+  font-family: "Varela Round", sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 570;
+  color: #203a3e;
+  margin: 10px;
+}
+
+.autor {
+  padding: 10px;
+  text-align: right;
+  font-size: 16px;
+  font-style: italic;
+  background-color: #1db985;
+  color: #2c3f52;
+  margin: 0;
+}
+
+
+/* Botones */
+.btn-scroll {
+  background-color: #1db985;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  font-size: 1em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.btn-scroll:hover {
+  background-color: #17a674;
+  transform: scale(1.05);
+}
+
+.btn-premium {
+  background-color: #203a3e;
+  color: #1db985;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-premium:hover {
+  color: #1db985;
+  background-color: #1a1a1a;
+  transform: scale(1.05);
+}
+
+
+/* Scroll vertical bonito */
+#artistasDecorativos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-height: 560px; 
+  overflow-y: auto;
+  padding-right: 10px;
+  position: relative; 
+}
+
+#artistasDecorativos::-webkit-scrollbar {
+  width: 8px;
+}
+
+#artistasDecorativos::-webkit-scrollbar-thumb {
+  background-color: #1db985;
+  border-radius: 4px;
+}
+
+#artistasDecorativos::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to top, #203a3e, transparent);
+  pointer-events: none;
+}
+
+
+/* ===== REPRODUCTOR FIJO ===== */
 #reproductorFijo {
   position: fixed;
   bottom: 0;
@@ -307,40 +388,7 @@ section + section {
 }
 
 
-.novedades {
-  margin-bottom: 40px;
-}
-
-.novedades h2 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 25px;
-  color: #1db985;
-  border-bottom: 3px solid #1db985;
-  padding-bottom: 10px;
-}
-
-.contenedor-novedades {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.tarjeta-novedad {
-  background-color: #1a1a1a;
-  border-radius: 12px;
-  overflow: hidden;
-  width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.tarjeta-novedad:hover {
-  transform: scale(1.03);
-}
-
+/* ===== FOOTER ===== */
 .footer-principal {
   background-color: #111;
   color: #ccc;
@@ -372,7 +420,6 @@ section + section {
 .footer-columna h3 {
   color: #1db985;
   font-size: 1.1em;
-
 }
 
 .footer-columna ul {
@@ -406,63 +453,13 @@ section + section {
   font-size: 0.85em;
 }
 
-.press-contenido {
-  padding: 20px;
-  margin: 50px;
-  border-radius: 30px;
-  position: relative;
-  background-color: #1db985;
-  border-left: 5px solid #2c3f52;
-}
 
-.cita-contenedor {
-  /* Aquí vemos el contenedor para la cita */
-
-  display: flex;
-  padding: 5px;
-  align-items: center;
-  margin-bottom: -15px;
-}
-
-.cita-icono {
-
-  font-size: 80px;
-  font-family: "Georgia", serif;
-  color: #2c3f52;
-  line-height: 0.6;
-  margin-right: 30px;
-  margin-left: 5px;
-  display: inline-block;
-}
-
-.frase {
-  /* En relación al texto, vemos el estilo de la frase */
-  font-family: "Varela Round", sans-serif;
-  font-size: 18px;
-  font-style: italic;
-
-  font-weight: 570;
-  color: #2c3f52;
-  margin: 10px;
-}
-
-.autor {
-  /* El autor de la cita tiene un estilo distinto y tengo
-que tratarlo por separado */
-
-  padding: 10px;
-  text-align: right;
-  font-size: 16px;
-  font-style: italic;
-  background-color: #1db985;
-  color: #2c3f52;
-  margin: 0;
-}
-
+/* ===== TRANSICIÓN DE PÁGINA ===== */
 body.fade-out {
   opacity: 0;
   transition: opacity 0.4s ease-out;
 }
+
 
 /* ========================================= */
 

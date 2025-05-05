@@ -19,7 +19,7 @@ La web está estructurada en distintas secciones navegables, simulando un entorn
 - ✅ Vista de **perfil de usuario**  
 - ✅ Página de **artistas**, con listado e información individual  
 - ✅ Sección de **juego interactivo**  
-- ✅ Botón de **reproducción aleatoria** (simulado)  
+- ✅ Botón de **reproducción aleatoria** con música y publicidad ficticia.
 - ✅ Estilos personalizados con gradientes, transiciones y diseño responsive  
 - ✅ Navegación lateral y cambio de vistas sin recargar  
 

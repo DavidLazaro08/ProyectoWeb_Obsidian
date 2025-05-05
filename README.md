@@ -1,6 +1,10 @@
 # 🎧 Proyecto Web Musical - Obsidian
 
-Repositorio del grupo **Obsidian** formado por: **Juan**, **David L.**, **Matador** y **Jacobo**.
+Repositorio del grupo **Obsidian** formado por: 
+**Juan Jiménez Nieto**, 
+**Ángel Luis Matador Posada**
+**Jacobo Luis Domínguez Morales**, y
+**David Gutiérrez Ortiz**. 
 
 ## 📝 Descripción
 

@@ -266,7 +266,7 @@ body.fade-out {
 }
 
 .footer-contenido {
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
@@ -318,4 +318,24 @@ body.fade-out {
 .footer-copy {
   color: #666;
   font-size: 0.85em;
+}
+
+.footer-social img {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 8px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .footer-secciones {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-columna {
+    margin-bottom: 20px;
+  }
 }

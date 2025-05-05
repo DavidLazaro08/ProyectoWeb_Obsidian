@@ -169,6 +169,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Script para mostrar el nombre de usuario en el main
+window.addEventListener('DOMContentLoaded', () => {
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+  if (currentUser) {
+    const nombreUsuario = document.getElementById('nombreUsuario');
+    if (nombreUsuario) {
+      nombreUsuario.textContent = currentUser.username;
+    }
+  }
+});
+
+
 
 
 

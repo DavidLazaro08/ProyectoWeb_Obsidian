@@ -33,3 +33,15 @@ inputImagen.addEventListener("change", function () {
     reader.readAsDataURL(file);
   }
 });
+
+// Script para mostrar el nombre de usuario en el perfil
+window.addEventListener('DOMContentLoaded', () => {
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+  if (currentUser) {
+    const nombreUsuario = document.getElementById('nombreUsuario');
+    if (nombreUsuario) {
+      nombreUsuario.textContent = currentUser.username;
+    }
+  }
+});

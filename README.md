@@ -27,7 +27,7 @@ La web está estructurada en distintas secciones navegables, simulando un entorn
 
 ```
 PROYECTOWEB_OBSIDIAN/
-├── .idea/                     # Configuración del entorno (VSCode o similar)
+├── .idea/                     # Configuración del entorno utilizado
 ├── assets/                    # Imágenes y recursos multimedia
 ├── css/
 │   ├── artista.css

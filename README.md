@@ -2,7 +2,7 @@
 
 Repositorio del grupo **Obsidian** formado por: 
 **Juan Jiménez Nieto**, 
-**Ángel Luis Matador Posada**
+**Ángel Luis Matador Posada**,
 **Jacobo Luis Domínguez Morales**, y
 **David Gutiérrez Ortiz**. 
 
